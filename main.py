@@ -73,36 +73,48 @@ def breakfast():
 
 def shower():
     initial_answer = input(
-        " You walk into the bathroom, smell your armpit and almost choke at the stench! You can either: \n a) Take a detailed shower cleaning every nook and cranny. \n b) Take a quick shower and get to the next task.")
+        " You walk into the bathroom, smell your armpit and almost choke at the stench! You can either: \n a) Take a detailed shower cleaning every nook and cranny. \n b) Take a quick shower and get to the next task."
+    )
     if initial_answer == "a":  # Detail shower
         answer = input(
-            "While wasking your face, you do think you feel a little scruffy. Would you like to shave? \n 'Yes' or 'No': ").lower()
+            "While wasking your face, you do think you feel a little scruffy. Would you like to shave? \n 'Yes' or 'No': "
+        ).lower()
         if answer == "yes":
             return [shave, breakfast()]
         elif answer == "no":
             breakfast()
     elif initial_answer == "b":  # Quick shower
         qs_answer = input(
-            "You finish taking you shower and turn the water off. Do oyu want to dry off inside or outside the shower? \n a) Inside \n b) Outside")
+            "You finish taking you shower and turn the water off. Do oyu want to dry off inside or outside the shower? \n a) Inside \n b) Outside"
+        )
         if qs_answer == "b":  # Outside
-            print("As you are stepping out, you didn't realize there was no mat on the floor. Your wet feet slip on the floor, and you smack your head on the edge of the tub! You wake up some time later with a massive headache.")
+            print(
+                "As you are stepping out, you didn't realize there was no mat on the floor. Your wet feet slip on the floor, and you smack your head on the edge of the tub! You wake up some time later with a massive headache."
+            )
             return [(time + 45), breakfast()]
         elif qs_answer == "a":  # Inside
-            print("As you're toweling off, you realize you need to throw some towels in the wash before you leave the house. You run to the laundry room and throw some towels in.")
+            print(
+                "As you're toweling off, you realize you need to throw some towels in the wash before you leave the house. You run to the laundry room and throw some towels in."
+            )
             return [(time + 20), breakfast()]
 
 
 def cod():
     initial_answer = input(
-        "You decide to play COD but you end the game in a loss. Do you: \n a) Quit and move onto getting ready? \n b) Run it back to redeem yourself?")
+        "You decide to play COD but you end the game in a loss. Do you: \n a) Quit and move onto getting ready? \n b) Run it back to redeem yourself?"
+    )
     if initial_answer == "b":  # Run it back to redeem yourself?
-        answer = input("You just couldn't end on a loss, 4 games later here you are. Got to get to the interview! Will you: \n a) Go to the kitchen to eat breakfast? \n b) Take a shower?  ")
+        answer = input(
+            "You just couldn't end on a loss, 4 games later here you are. Got to get to the interview! Will you: \n a) Go to the kitchen to eat breakfast? \n b) Take a shower?  "
+        )
         if answer == "a":  # Go to the kitchen to eat breakfast?
             return [(cod_play_again), breakfast()]
         elif answer == "b":  # Take a shower?
             return [(cod_play_again), shower()]
     if initial_answer == "a":  # Quit and move onto getting ready?
-        answer = input("You decide to play just one game and be responsible and get ready for your interview! Will you: \n a) Go to the kitchen to eat breakfast? \n b) Take a shower?  ")
+        answer = input(
+            "You decide to play just one game and be responsible and get ready for your interview! Will you: \n a) Go to the kitchen to eat breakfast? \n b) Take a shower?  "
+        )
         if answer == "a":  # Go to the kitchen to eat breakfast?
             return [(cod_quit), breakfast()]
         elif answer == "b":  # Take a shower?
@@ -110,27 +122,35 @@ def cod():
 
 
 def wake_up():
-    print('Your alarm goes off at 6:30AM. You can either?  \n a) Hit the snooze button \n b) Hop out of bed.')
-    answer = input('Choose A or B').lower()
-    if answer == 'a':  # Hit the snooze button
-        print('You slept through the snooze and glance at the time. It is now 7:35! You quickly get up and decide what to do. \n a) Run to the kitchen to get some breakfast? \n b) Run to the bathroom to take a shower?')
-        answer = input('Choose A or B').lower()
-        if answer == 'a':  # Run to the kitchen to get some breakfast?
+    print(
+        "Your alarm goes off at 6:30AM. You can either?  \n a) Hit the snooze button \n b) Hop out of bed."
+    )
+    answer = input("Choose A or B").lower()
+    if answer == "a":  # Hit the snooze button
+        print(
+            "You slept through the snooze and glance at the time. It is now 7:35! You quickly get up and decide what to do. \n a) Run to the kitchen to get some breakfast? \n b) Run to the bathroom to take a shower?"
+        )
+        answer = input("Choose A or B").lower()
+        if answer == "a":  # Run to the kitchen to get some breakfast?
             return [(snooze), breakfast()]
-        elif answer == 'b':  # Run to the bathroom to take a shower?
+        elif answer == "b":  # Run to the bathroom to take a shower?
             return [(snooze), shower()]
-    elif answer == 'b':  # Hop out of bed
-        print('You excitedly roll out of bed eager to get going. You think about what you should do and what you want to do. \n a) Run to the bathroom to take a shower? \n b) Rush to your gaming room to play a quick game of the new Call of Duty that you just downloaded.')
-        answer = input('Choose A or B').lower()
-        if answer == 'a':  # Run to the bathroom to take a shower?
+    elif answer == "b":  # Hop out of bed
+        print(
+            "You excitedly roll out of bed eager to get going. You think about what you should do and what you want to do. \n a) Run to the bathroom to take a shower? \n b) Rush to your gaming room to play a quick game of the new Call of Duty that you just downloaded."
+        )
+        answer = input("Choose A or B").lower()
+        if answer == "a":  # Run to the bathroom to take a shower?
             return shower()
-        elif answer == 'b':  # Run to play COD?
+        elif answer == "b":  # Run to play COD?
             return cod()
 
 
 def adventure_game():
-    print('You have a big job interview at ABC Company tomorrow at 10:00, with person. You went to bed early to make sure to make it there on time. (Be careful of the choices you make. Everything you choose will determine when you make it there).')
-    start_game = input('Ready to play? Enter Yes or No.  ').lower()
+    print(
+        "You have a big job interview at ABC Company tomorrow at 10:00, with person. You went to bed early to make sure to make it there on time. (Be careful of the choices you make. Everything you choose will determine when you make it there)."
+    )
+    start_game = input("Ready to play? Enter Yes or No.  ").lower()
     if start_game == "yes":
         return wake_up()
     else:

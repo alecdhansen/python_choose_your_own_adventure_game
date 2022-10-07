@@ -69,3 +69,35 @@ def breakfast():
             return [pancakes_french_toast, no_roommate_brush()]
         elif initial_answer == "French Toast":
             return [pancakes_french_toast, no_roommate_brush()]
+
+def shower():
+    initial_answer = input(" You walk into the bathroom, smell your armpit and almost choke at the stench! You can either: \n a) Take a detailed shower cleaning every nook and cranny. \n b) Take a quick shower and get to the next task.")
+    if initial_answer == "a": # Detail shower
+        answer = input("While wasking your face, you do think you feel a little scruffy. Would you like to shave? \n 'Yes' or 'No': ").lower()
+        if answer == "yes":
+            return [shave, breakfast()]
+        elif answer == "no":
+            breakfast()
+    elif initial_answer == "b": # Quick shower
+        qs_answer = input("You finish taking you shower and turn the water off. Do oyu want to dry off inside or outside the shower? \n a) Inside \n b) Outside")
+        if qs_answer == "b": # Outside
+            print("As you are stepping out, you didn't realize there was no mat on the floor. Your wet feet slip on the floor, and you smack your head on the edge of the tub! You wake up some time later with a massive headache.")
+            return [(time + 45), breakfast()]
+        elif qs_answer == "a":  # Inside
+            print("As you're toweling off, you realize you need to throw some towels in the wash before you leave the house. You run to the laundry room and throw some towels in.")
+            return [(time + 20), breakfast()]
+
+def cod():
+    initial_answer = input("You decide to play COD but you end the game in a loss. Do you: \n a) Quit and move onto getting ready? \n b) Run it back to redeem yourself?")
+    if initial_answer == "b": # Run it back to redeem yourself?
+        answer = input("You just couldn't end on a loss, 4 games later here you are. Got to get to the interview! Will you: \n a) Go to the kitchen to eat breakfast? \n b) Take a shower?  ")
+        if answer == "a":  # Go to the kitchen to eat breakfast?
+            return [(cod_play_again), breakfast()]
+        elif answer == "b": # Take a shower?
+            return [(cod_play_again), shower()]
+    if initial_answer == "a": # Quit and move onto getting ready?
+        answer = input("You decide to play just one game and be responsible and get ready for your interview! Will you: \n a) Go to the kitchen to eat breakfast? \n b) Take a shower?  ")
+        if answer == "a": # Go to the kitchen to eat breakfast?
+            return [(cod_quit), breakfast()]
+        elif answer == "b": # Take a shower?
+            return [(cod_quit), shower()]

@@ -1,7 +1,9 @@
+from operator import truediv
 from colorama import Style, Fore, Back, init
 
 
 def jonathan():
+    question = True
     print()
     print(Fore.CYAN + "<>" * 73)
     print("\n  Welcome to the questionaire part of your interview. \n" "This will help us get to know you based off a few scenarios.")
@@ -91,6 +93,10 @@ def jonathan():
             print(
                 "Oops! Well I hope I didn't offend you, but I love meat! Maybe we can get you a salad! ")
             return (best_answer)
+
+        while question is True:
+            jonathan()
+            break
 
 
 if __name__ == "__main__":

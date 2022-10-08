@@ -1,9 +1,8 @@
-from operator import truediv
 from colorama import Style, Fore, Back, init
 
 
 def jonathan():
-    question = True
+    Question = True
     print()
     print(Fore.CYAN + "<>" * 73)
     print("\n  Welcome to the questionaire part of your interview. \n" "This will help us get to know you based off a few scenarios.")
@@ -23,19 +22,21 @@ def jonathan():
         print(Fore.CYAN + "<>" * 73)
         print("\n You would be a great fit! Would you consider this job offer?")
 
-    def sink_or_swim():
+    def dead_or_alive():
         print()
-        print(Fore.CYAN + "<>" * 73)
-        print("\n If you were thrown into the deep end of a 12 foot pool blindfolded, would you sink or would you swim? ")
-        initial_answer = input(
-            "\n    a) Dude! I can't swim!! I'm definitely going to sink! \n    b) Of course I can swim, I taught Michael Phelps!").lower()
+        print("If you could bring back person or pet from the dead, who would it be? \n a) A family memeber, I miss them so much! \n b) Your favorite music artist, becuase music is not the same without them. \n c) Your favorite pet, you miss having them around.")
+        initial_answer = input("\n  Choose  A or B:  ").lower()
         if initial_answer == "a":
-            print(Fore.LIGHTYELLOW_EX +
-                  "Hmmm Why are so afraid of the water? I thought everyone knows how to swim!")
-            return next_time()
+            print(Fore.LIGHTYELLOW_EX + "Family is forever! You had the chance to bring a love one back, and you did! We value family and you would fit right in! \n")
+            return hire_interviewer()
         elif initial_answer == "b":
-            print(Fore.LIGHTYELLOW_EX + "Awesome! We love people who enjoy, and are not affraid of the water! Maybe you can join us at at the Water Park on our next company event. ")
-            return hire_interviewer
+            print(Fore.LIGHTYELLOW_EX +
+                  "Music changes daily! You can still listen to your favorite artist without them being alive")
+            return best_answer()
+        elif initial_answer == "c":
+            print(Fore.LIGHTYELLOW_EX +
+                  "Pets are just like family! We love our fur babies just like our own!")
+            return hire_interviewer()
 
     def plane_crash():
         print()
@@ -46,14 +47,14 @@ def jonathan():
         if initial_answer == "a":
             print(
                 "C'mon man its 2022, everybody should have taken at least one flight by now!")
-            return next_time()
+            return (dead_or_alive)
         elif initial_answer == "b":
             print(
                 "That's smart! Do you typically go skydiving to readily have that avaliable? ")
-            return hire_interviewer
+            return dead_or_alive()
         elif initial_answer == "c":
             print("That doesn't sound like you will survive long with that mindset. Hopefully you have some camping experience!")
-            return best_answer()
+            return dead_or_alive()
 
     def titanic_ship():
         print()
@@ -64,39 +65,48 @@ def jonathan():
         if initial_answer == "a":
             print(
                 "Smart Answer! A water raft will more than likely will save the lives of many!")
-            return (hire_interviewer)
-
+            return plane_crash()
         if initial_answer == "b":
             print(
                 "Hey it is what it is! You have accpeted you fate, and maybe we will see you on the other side.")
-            return (next_time)
+            return plane_crash()
 
         if initial_answer == "c":
             print("Well it looks like this is a time where being broke was a benefit! Are you now ready to be employed, and generate a steady income?")
-            return (hire_interviewer)
+            return plane_crash()
 
-        def cooked_steak():
-            print()
-            print(Fore.CYAN + "<>" * 73)
-            print("How do you like your steak cooked?")
-            initial_answer = input(
-                "\n a) The best way to have a steak is medium well, \n b) I want to taste the flesh, make mine rare! \n c) EWW! I hate meat, I'm a vegetarian!").lower()
+    def cooked_steak():
+        print()
+        print(Fore.CYAN + "<>" * 73)
+        print("How do you like your steak cooked?\n  \n a) The best way to have a steak is medium well, \n b) I want to taste the flesh, make mine rare! \n c) EWW! I hate meat, I'm a vegetarian!")
+        initial_answer = input("\n  Choose  A, B or C :  ").lower()
         if initial_answer == "a":
             print("Great answer! I Can tell you have great taste in food!")
-            return (hire_interviewer)
-
-        if initial_answer == "b":
+            return titanic_ship()
+        elif initial_answer == "b":
             print("OMG! Are you even human! Who eats raw meat like that! ")
-            return (next_time)
-
-        if initial_answer == "c":
+            return titanic_ship()
+        elif initial_answer == "c":
             print(
                 "Oops! Well I hope I didn't offend you, but I love meat! Maybe we can get you a salad! ")
-            return (best_answer)
+            return titanic_ship()
 
-        while question is True:
-            jonathan()
-            break
+    def sink_or_swim():
+        print()
+        print(Fore.CYAN + "<>" * 73)
+        print("\n If you were thrown into the deep end of a 12 foot pool blindfolded, would you sink or would you swim? \n    a) Dude! I can't swim!! I'm definitely going to sink! \n    b) Of course I can swim, I taught Michael Phelps!")
+        initial_answer = input("\n  Choose  A or B:  ").lower()
+        if initial_answer == "a":
+            print(Fore.LIGHTYELLOW_EX +
+                  "Hmmm Why are so afraid of the water? I thought everyone knows how to swim! \n")
+            return cooked_steak()
+        elif initial_answer == "b":
+            print(Fore.LIGHTYELLOW_EX + "Awesome! We love people who enjoy, and are not affraid of the water! Maybe you can join us at at the Water Park on our next company event. ")
+            return cooked_steak()
+
+    while Question == True:
+        sink_or_swim()
+        break
 
 
 if __name__ == "__main__":

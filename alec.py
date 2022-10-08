@@ -1,7 +1,12 @@
+from colorama import Style, Fore, Back, init
+
+
 def alec():
     Play = True
 
     def you_got_the_job():
+        print()
+        print(Fore.CYAN + "<>" * 73)
         print()
         return print(
             "NICE! You got the job! Congrats! Those 12 weeks of code school paid off."
@@ -9,14 +14,18 @@ def alec():
 
     def dejected_walk_of_shame():
         print()
+        print(Fore.CYAN + "<>" * 73)
+        print()
         return print(
             "You can't believe this has happened. You really wanted this job, but you've come to realize coding must not be your thing. \n You head out the door into the rain and dejectedly walk home.\n\n\n\n\n\n"
         )
 
     def brick_question():
         print()
+        print(Fore.CYAN + "<>" * 73)
+        print()
         print(
-            "You've made it to the final question. \n This might be the most important question you'll ever answer."
+            "You've made it to the final question. \n This might be the most important question you'll ever answer.\n"
         )
         print(
             """________________________________________
@@ -28,7 +37,7 @@ def alec():
                  |_______|__________|_________|_________|"""
         )
         print(
-            "See that brick wall? Which brick would you be, and why? \n  a) A brick on the top, so I can see the whole world! \nb) A brick on the bottom, so I could hold my team on my shoulders \nc) A brick right in the middle, so I can be right in the action. I love teamwork!"
+            "\n See that brick wall? Which brick would you be, and why? \n  a) A brick on the top, so I can see the whole world! \nb) A brick on the bottom, so I could hold my team on my shoulders \nc) A brick right in the middle, so I can be right in the action. I love teamwork!"
         )
         initial_answer = input(" \n*Enter your own answer here*   ").lower()
         if initial_answer == "a":
@@ -51,6 +60,8 @@ def alec():
             return you_got_the_job()
 
     def super_hard_math_question():
+        print()
+        print(Fore.CYAN + "<>" * 73)
         print()
         print(
             "Alec shuffles his papers and prepares his next question.\n If a hen and a half lay an egg and a half in a day and a half, \n how many eggs will half a dozen hens lay in half a dozen days?"
@@ -77,6 +88,8 @@ def alec():
             return brick_question()
 
     def downstairs():
+        print()
+        print(Fore.CYAN + "<>" * 73)
         print()
         print(
             "You made it downstairs. It's dark and quiet down here. \n In your haste to get down here you can't remember \n why you even came down to begin with. Do you"
@@ -138,6 +151,8 @@ def alec():
                 return super_hard_math_question()
 
     def egg_question():
+        print()
+        print(Fore.CYAN + "<>" * 73)
         print()
         print(
             "You finally made it! Alec will be handling your interview today. \n Remember, every answer you give the next couple of minutes could potentially define \n your career, and even your life.\n"

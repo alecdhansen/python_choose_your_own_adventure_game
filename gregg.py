@@ -29,9 +29,8 @@ def gregg():
         print(Fore.CYAN + "<>" * 73)
         print(
             Fore.LIGHTYELLOW_EX
-            + "\n You've made it to the last question of the morning!. Are you ready?\n"
+            + "\n You've made it to the last question of the morning!. Are you ready?\n What does the perfect sandwich look like? \n"
         )
-        print(Fore.LIGHTYELLOW_EX + "\n What does the perfect sandwich look like? \n")
         initial_answer = input(
             "     a) Bread, lettuce, tofu, cinnamon, cilantro, then a peppered tomato. \n     b) PBNJNONN (Peanut Butter n Jelly n Oreo n Nutella) \n     c) A hot dog! \n\n     Choose  A, B, C or enter your own answer!  "
         ).lower()
@@ -40,7 +39,7 @@ def gregg():
             print(Fore.CYAN + "<>" * 73)
             print(
                 Fore.LIGHTYELLOW_EX
-                + "\n Interesting answer! I like that. You're hired!...as our new chef!"
+                + "\n    Interesting answer! I like that. You're hired!...as our new chef!"
             )
             return you_got_the_job()
         elif initial_answer == "b":
@@ -48,7 +47,7 @@ def gregg():
             print(Fore.CYAN + "<>" * 73)
             print(
                 Fore.LIGHTYELLOW_EX
-                + "\n That's amazing and sounds incredible? How would you like to start out as a senior dev on your first day? You're hired! "
+                + "\n    That's amazing and sounds incredible? How would you like to start out as a senior dev on your first day? You're hired! "
             )
             return you_got_the_job()
         elif initial_answer == "c":
@@ -56,7 +55,16 @@ def gregg():
             print(Fore.CYAN + "<>" * 73)
             print(
                 Fore.LIGHTYELLOW_EX
-                + "\n I won't even entertain the idea of a hot dog being a sandwich. Get a job somewhere else you loser!"
+                + "\n    I won't even entertain the idea of a hot dog being a sandwich. Get a job somewhere else you loser!"
+            )
+            return dejected_walk_of_shame()
+        elif initial_answer != "a" or "b" or "c":
+            print()
+            print(Fore.CYAN + "<>" * 73)
+            print(
+                Fore.LIGHTYELLOW_EX
+                + "\n    I have never heard of that sandwich before!", Fore.LIGHTRED_EX
+                +  "    You know where the door is."
             )
             return dejected_walk_of_shame()
 
@@ -82,8 +90,8 @@ def gregg():
             print()
             print(Fore.CYAN + "<>" * 73)
             print(
-                Fore.LIGHTYELLOW_EX
-                + "\n Gregg likes this answer. Gregg has always vibed with Spock too."
+                Fore.LIGHTGREEN_EX
+                + "\n    Gregg likes this answer. Gregg has always vibed with Spock too."
             )
             return sandwich_question()
         elif initial_answer == "b":
@@ -91,7 +99,7 @@ def gregg():
             print(Fore.CYAN + "<>" * 73)
             print(
                 Fore.LIGHTYELLOW_EX
-                + "\n You'll fit right in here. We don't ever let our employees take vacation. \n You'll never have to see the beach again!"
+                + "\n\n    You'll fit right in here. We don't ever let our employees take vacation. \n    You'll never have to see the beach again!\n"
             )
             return sandwich_question()
         elif initial_answer == "c":
@@ -99,7 +107,8 @@ def gregg():
             print(Fore.CYAN + "<>" * 73)
             print(
                 Fore.LIGHTYELLOW_EX
-                + "\n You're such a bandwagon Star Wars fan! You can't just like someone because they're cute! \n You need to leave immediately. You're fired from this interview!"
+                + "\n    You're such a bandwagon Star Wars fan! You can't just like someone because they're cute! \n    You need to leave immediately.\n", Fore.LIGHTRED_EX
+                + "   You're fired from this interview!"
             )
             return dejected_walk_of_shame()
         elif initial_answer == "d":
@@ -107,7 +116,7 @@ def gregg():
             print(Fore.CYAN + "<>" * 73)
             print(
                 Fore.LIGHTYELLOW_EX
-                + "\n Yes I agree with you here. There's something satisfying in yelling, 'blast 'em!'. \n I do this daily when debugging my code."
+                + "\n\n    Yes I agree with you here. There's something satisfying in yelling, 'blast 'em!'. \n    I do this daily when debugging my code.\n"
             )
             return sandwich_question()
 
@@ -115,8 +124,9 @@ def gregg():
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
-            Fore.GREEN
-            + "\nAlright let's get our hands dirty. Let's open up my terminal on this nice company computer \n\n Do you:\n"
+            Fore.LIGHTYELLOW_EX
+            + "\n Alright let's get our hands dirty. Let's open up my terminal on this nice company computer.",
+            "\n\n     Do you:\n"
         )
         initial_answer = input(
             "     a) Panic because you definitely have forgotten how to open the terminal \n     b) Command + spacebar + 'terminal' that bad boy in no time at all \n     c) Shakily stumble over a few keys and accidently type 'Turtle'\n\n     Choose  A, B or C:  "
@@ -125,50 +135,58 @@ def gregg():
             print()
             print(Fore.CYAN + "<>" * 73)
             print(
-                "\nGregg looks at you and smiles like a grandmother to her grandchild, and says 'you poor thing.' \n You really have no idea what you're doing, do you? We can skip this portion of the interview."
+                Fore.LIGHTGREEN_EX
+                + "\n  Gregg looks at you and smiles like a grandmother to her grandchild, and says.", Fore.LIGHTYELLOW_EX + " 'Bless your heart.' \n  You really have no idea what you're doing, do you? We can skip this portion of the interview."
             )
             return star_trek_or_star_wars()
         elif initial_answer == "b":
             print()
             print(Fore.CYAN + "<>" * 73)
             print(
-                "\n Okay speedy! Create a folder for me to keep files of our past Coronavirus policies."
+                Fore.LIGHTYELLOW_EX + "\n Okay speedy! Create a directory for me to keep files of our past Coronavirus policies."
             )
             answer = input(
-                "\n a) You type 'mkdir covid_19_policies' \n b) You type 'mkdirn virus --all' \n c) You panic and realize the only thing you know how to do on a computer is open the terminl. \n     Choose  A, B or C:  "
+                "\n     a) You type 'mkdir covid_19_policies' \n     b) You type 'mkdirn virus --all' \n     c) You panic and realize the only thing you know how to do on a computer is open the terminl. \n\n     Choose  A, B or C:  "
             ).lower()
             if answer == "a":
                 print()
                 print(Fore.CYAN + "<>" * 73)
                 print(
-                    Fore.GREEN
-                    + "\n Wow great! You killed this! You'll do very well here."
+                    Fore.LIGHTYELLOW_EX
+                    + "\n   Wow great! You killed this! You'll do very well here."
                 )
                 return star_trek_or_star_wars()
             elif answer == "b":
                 print()
                 print(Fore.CYAN + "<>" * 73)
+                print()
+                print(Fore.RED + "<>" * 73)
+                print(Fore.RED + "<>" * 73)
                 print(
-                    Fore.GREEN
-                    + "\n The computer begins to smoke. The screen flashes red, then green, then it turns blue. \n It's nothing but blue. One big blue screen of death. \n You've downloaded a virus so terrible it's completely wiped out the entire company. \n Really Important Company ceases to exist because of you. \n You hang your head and without even looking at Gregg, somberly walk out."
+                    Fore.LIGHTRED_EX
+                    + "\n    The computer begins to smoke. The screen flashes red, then green, then it turns blue. \n    It's nothing but blue. One big blue screen of death. \n    You've downloaded a virus so terrible it's completely wiped out the entire company. \n    Really Important Company ceases to exist because of you. \n    You hang your head and without even looking at Gregg, somberly walk out."
                 )
+                print()
+                print(Fore.RED + "<>" * 73)
+                print(Fore.RED + "<>" * 73)
                 return dejected_walk_of_shame()
             elif answer == "c":
                 print()
                 print(Fore.CYAN + "<>" * 73)
                 print(
-                    "Gregg sees right through you. He knew you were a fraud all along. \n There's still a chance at this job, but you better be perfect from here on out."
+                    Fore.LIGHTGREEN_EX + "\n    Gregg sees right through you. He knew you were a fraud all along. \n    There's still a chance at this job, but you better be perfect from here on out."
                 )
                 return star_trek_or_star_wars()
         elif initial_answer == "c":
             print()
             print(Fore.CYAN + "<>" * 73)
             print(
-                Fore.GREEN
-                + "\n Gregg looks stunned. He can't believe his eyes. Did you just invent a new programming language? What is this?"
+                Fore.LIGHTGREEN_EX
+                + "\n Gregg looks stunned. He can't believe his eyes.", Fore.LIGHTYELLOW_EX
+                +  "Did you just invent a new programming language? What is this?"
             )
             print(
-                Fore.GREEN
+                Fore.LIGHTGREEN_EX
                 + "\n Of course 'Turtle' is not really a programming language nor did you actually just invent it. Do you:\n"
             )
             answer = input(
@@ -178,28 +196,25 @@ def gregg():
                 print()
                 print(Fore.CYAN + "<>" * 73)
                 print(
-                    "\n Gregg is impressed! He tells you the company is thinking of an overhaul and Turtle just might be what they're looking for."
+                    Fore.LIGHTGREEN_EX
+                + "\n\n Gregg is impressed! He tells you the company is thinking of an overhaul and Turtle just might be what they're looking for.\n"
                 )
                 return star_trek_or_star_wars()
             elif answer == "b":
                 print()
                 print(Fore.CYAN + "<>" * 73)
                 print(
-                    "\n You've made Gregg cry. Oh uh. This is not good. Gregg quietly asks you to leave and to never come back. \n"
+                    Fore.LIGHTRED_EX + "\n    You've made Gregg cry. Oh uh. This is not good. Gregg quietly asks you to leave and to never come back. \n"
                 )
-                print("Dang it! Why'd you have to be so mean? \n")
+                print(Fore.LIGHTRED_EX + "    Dang it! Why'd you have to be so mean? \n")
                 return dejected_walk_of_shame()
             elif answer == "c":
                 print()
                 print(Fore.CYAN + "<>" * 73)
                 print(
-                    "\n"
-                    + Fore.GREEN
-                    + "Gregg can't believe his eyes. This language is incredibly fast! I love Turtle! \n",
-                )
-                print(
-                    Fore.GREEN
-                    + "You smile to yourself and pretend like everything that's just happened is totally normal."
+                    "\n\n"
+                    + Fore.LIGHTGREEN_EX
+                    + "    Gregg can't believe his eyes. This language is incredibly fast! I love Turtle! \n    You smile to yourself and pretend like everything that's just happened is totally normal.\n"
                 )
                 return star_trek_or_star_wars()
 
@@ -218,13 +233,13 @@ def gregg():
             print(Fore.CYAN + "<>" * 73)
             print(
                 Fore.LIGHTYELLOW_EX
-                + "\nLook pal, that's not right. These are basic concepts I'd expect you to know. \nI'll let you redeem yourself.",
+                + "\n\n Look pal, that's not right. These are basic concepts I'd expect you to know. I'll let you redeem yourself.",
+                Fore.LIGHTYELLOW_EX
+                + "\n How much wood could a woodchuck chuck if a woodchuck could chuck wood?",
                 Fore.GREEN
-                + "How much wood could a woodchuck chuck if a woodchuck could chuck wood?"
-                + Style.RESET_ALL
-                + "\n"
-                + Fore.YELLOW
-                + "You're laughing. Do you think this is a silly question? \n",
+                + "\n          < You start laughing >", 
+                Fore.LIGHTYELLOW_EX
+                + "\n Do you think this is a silly question? \n",
             )
             answer = input("     Enter -  Yes or No  ").lower()
             if answer == "yes":
@@ -240,7 +255,7 @@ def gregg():
                 print(Fore.CYAN + "<>" * 73)
                 print(
                     Fore.LIGHTYELLOW_EX
-                    + "\n Good, cause I agree. Woodchucks are serious creatures and so am I!"
+                    + "\n\n Good, cause I agree. Woodchucks are serious creatures and so am I!\n"
                 )
                 return star_trek_or_star_wars()
         elif initial_answer == "b":
@@ -258,20 +273,20 @@ def gregg():
                 print(Fore.CYAN + "<>" * 73)
                 print(
                     Fore.LIGHTYELLOW_EX
-                    + "\nOkay listen, no need to pretend. I can spot a liar a mile away. \n"
+                    + "\n\n  Okay listen, no need to pretend. I can spot a liar a mile away. \n"
                 )
                 return type_some_code()
             elif answer == "b":
                 print()
                 print(Fore.CYAN + "<>" * 73)
-                print(Fore.LIGHTYELLOW_EX + "\n I appreciate the honesty... \n")
+                print(Fore.LIGHTYELLOW_EX + "\n\n  I appreciate the honesty... \n")
                 return star_trek_or_star_wars()
         elif initial_answer == "c":
             print()
             print(Fore.CYAN + "<>" * 73)
             print(
                 Fore.LIGHTYELLOW_EX
-                + "\nNice! You're an idiot! That's incorrect. Look, I'm glad you got here early for this interview but you need to step it up."
+                + "\n\n  Nice! You're an idiot! That's incorrect. Look, I'm glad you got here early for this interview but you need to step it up.\n"
             )
             return type_some_code()
 

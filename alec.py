@@ -121,15 +121,19 @@ def alec():
         ).lower()
         if initial_answer == "a":
             print(
-                "\n Okay great, back to the interview. Let's hope Alec doesn't notice you forgot why you came downstairs."
+                Fore.GREEN
+                    + "\n Okay great, back to the interview. Let's hope Alec doesn't notice you forgot why you came downstairs."
             )
             return super_hard_math_question()
         elif initial_answer == "b":
+            print()
+            print(Fore.CYAN + "<>" * 73)
             print(
-                "\n Alright. Keep heading down the hall. Surely nothing bad could be behind this door, right? Do you"
+                Fore.GREEN
+                    + "\n Alright. Keep heading down the hall. Surely nothing bad could be behind this door, right? Do you:"
             )
             answer = input(
-                "\n a) Knock on the door \n b) Try and look undernearth \n c) Head straight in"
+                "\n     a) Knock on the door \n     b) Try and look undernearth \n     c) Head straight in\n\n     Choose -  A, B, or C:  "
             ).lower()
             if answer == "a":
                 print(
@@ -138,6 +142,8 @@ def alec():
                 )
                 return super_hard_math_question()
             elif answer == "b":
+                print()
+                print(Fore.CYAN + "<>" * 73)
                 print(
                     Fore.GREEN
                     + "\n You get down on all fours, peak underneath and *BOOM*. \n The door opens in your face. You take a second to collect yourself. \n Surely your nose is broken. There's no way you can carry on with the interview now"
@@ -145,10 +151,14 @@ def alec():
                 return dejected_walk_of_shame()
             elif answer == "c":
                 print(
-                    "You've just entered the room. You see a piece of paper on a table with the words \n TELL THEM THAT YOU 'hatebricks' WHEN THEY ASK YOU ABOUT BRICKS! \n This is VERY important."
+                    Fore.GREEN
+                    + "\n  You've just entered the room. You see a piece of paper on a table with the words \n", Fore.LIGHTCYAN_EX
+                    + "   TELL THEM THAT YOU 'hatebricks' WHEN THEY ASK YOU ABOUT BRICKS!\n      This is VERY important.\n"
                 )
                 return super_hard_math_question()
         elif initial_answer == "c":
+            print()
+            print(Fore.CYAN + "<>" * 73)
             print(
                 Fore.GREEN
                 + "\n The guys name is Roger. 'Rog' for short. He's worked here for only 2 years and hardly knows anything about coding, but makes $100,000/month. \n He tells you that he got the job because of one very important piece of info."
@@ -161,6 +171,8 @@ def alec():
                 "     a) Simply ask him what the info is \n     b) Pull out a $100 bill and offer it to him for the info \n     c) Get down on your knees and beg\n\n     Choose  A, B or C:  "
             ).lower()
             if answer == "a":
+                print()
+                print(Fore.RED + "<>" * 73)
                 print("\n Rog yells at you...")
                 print(
                     Fore.LIGHTRED_EX + "\n You think I would just give that info away??"
@@ -170,16 +182,13 @@ def alec():
                 )
                 return dejected_walk_of_shame()
             elif answer == "b":
-                print(
-                    "'Now we're talking' He says. 'TELL THEM THAT YOU 'hatebricks' WHEN THEY ASK YOU ABOUT BRICKS!' \n"
-                )
-                print("You thank him and head back upstairs!\n")
-                return super_hard_math_question
+                print("\n  'Now we're talking' He says. 'TELL THEM THAT YOU 'hatebricks' WHEN THEY ASK YOU ABOUT BRICKS!'", Fore.GREEN + "\n   You thank him and head back upstairs!\n")
+                return super_hard_math_question()
             elif answer == "c":
                 print(
-                    "'Excellent. I was hoping you'd beg.' He said. 'Here's the secret: TELL THEM THAT YOU 'hatebricks' WHEN THEY ASK YOU ABOUT BRICKS! \n This is VERY important.\n"
+                    "\n  'Excellent. I was hoping you'd beg.' He said. 'Here's the secret: TELL THEM THAT YOU 'hatebricks' WHEN THEY ASK YOU ABOUT BRICKS! \n   This is VERY important."
                 )
-                print("You thank him and head back upstairs!\n")
+                print(Fore.GREEN + "\n   You thank him and head back upstairs!\n")
                 return super_hard_math_question()
 
     def egg_question():

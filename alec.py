@@ -190,6 +190,9 @@ def alec():
             "     a) Scrambled \n     b) Fried \n     c) Raw\n\n     Choose  A, B or C:  "
         ).lower()
         if initial_answer == "a":
+            print()
+            print(Fore.CYAN + "<>" * 73)
+            print()
             print(
                 Fore.LIGHTYELLOW_EX
                 + "\n Scrambled! Of course! So you're saying you like to conform to the rest of the population and there's nothing special about you?\n Do you at least put ketchup on your eggs? \n "

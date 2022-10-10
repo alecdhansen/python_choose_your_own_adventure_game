@@ -11,9 +11,16 @@ class Alec:
         print()
         print(Fore.GREEN + "<>" * 73)
         print(Fore.GREEN + "<>" * 73)
-        return print(
-            "\n NICE! You got the job! Congrats! Those 12 weeks of code school paid off.\n\n\n\n\n\n"
+        print(
+            "\n NICE! You got the job! Congrats! Those 12 weeks of code school paid off.\n\n"
         )
+        print("""\n
+ __  __     ______     __  __        ______     ______     ______        __  __     __     ______     ______     _____    
+/\ \_\ \   /\  __ \   /\ \/\ \      /\  __ \   /\  == \   /\  ___\      /\ \_\ \   /\ \   /\  == \   /\  ___\   /\  __-.  
+\ \____ \  \ \ \/\ \  \ \ \_\ \     \ \  __ \  \ \  __<   \ \  __\      \ \  __ \  \ \ \  \ \  __<   \ \  __\   \ \ \/\ \ 
+ \/\_____\  \ \_____\  \ \_____\     \ \_\ \_\  \ \_\ \_\  \ \_____\     \ \_\ \_\  \ \_\  \ \_\ \_\  \ \_____\  \ \____- 
+  \/_____/   \/_____/   \/_____/      \/_/\/_/   \/_/ /_/   \/_____/      \/_/\/_/   \/_/   \/_/ /_/   \/_____/   \/____/ 
+                                                                                                                          \n\n\n""")
 
     def dejected_walk_of_shame(self):
         print()
@@ -21,9 +28,16 @@ class Alec:
         print()
         print(Fore.RED + "<>" * 73)
         print(Fore.RED + "<>" * 73)
-        return print(
-            "\n You can't believe this has happened. You really wanted this job, but you've come to realize coding must not be your thing. \n You head out the door into the rain and dejectedly walk home.\n\n\n\n\n\n"
+        print(
+            "\n You can't believe this has happened. You really wanted this job, but you've come to realize coding must not be your thing. \n You head out the door into the rain and dejectedly walk home.\n\n"
         )
+        print("""\n 
+ __   __     ______             __     ______     ______           ______     ______   ______   ______     ______    
+/\ "-.\ \   /\  __ \           /\ \   /\  __ \   /\  == \         /\  __ \   /\  ___\ /\  ___\ /\  ___\   /\  == \   
+\ \ \-.  \  \ \ \/\ \         _\_\ \  \ \ \/\ \  \ \  __<         \ \ \/\ \  \ \  __\ \ \  __\ \ \  __\   \ \  __<   
+ \ \_\\  "\_\  \ \_____\       /\_____\  \ \_____\  \ \_____\        \ \_____\  \ \_\    \ \_\    \ \_____\  \ \_\ \_\ 
+  \/_/ \/_/   \/_____/       \/_____/   \/_____/   \/_____/         \/_____/   \/_/     \/_/     \/_____/   \/_/ /_/ 
+                                                                                                                    \n\n\n""")
 
     def brick_question(self):
         print()

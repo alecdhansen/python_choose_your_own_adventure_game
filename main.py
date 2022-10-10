@@ -189,7 +189,8 @@ class Interview:
             2022, 10, 10, 9, 30, 0
         ):
             print(
-                "\n     You made it! Jonathan has been expecting you. Head on inside!"
+                "\n     You made it! Jonathan has been expecting you. Head on inside!""\n     Welcome to the questionaire part of your interview. \n"
+                "     This will help us get to know you based off a few scenarios."
             )
             return play_jonathan()
         elif times >= datetime(2022, 10, 10, 9, 30, 0):
@@ -204,8 +205,8 @@ def bike():
     print(Fore.BLUE + "<>" * 73)
     print()
     print(
-        Fore.GREEN
-        + "Wow you're healthy! You show up to the interview (a little sweaty)"
+        Fore.LIGHTGREEN_EX
+        + "\n   Wow you're healthy! You show up to the interview (a little sweaty)\n"
     )
     return [ride_bike(), Interview.interview()]
 
@@ -215,7 +216,7 @@ def bus():
     print(Fore.BLUE + "<>" * 73)
     print()
     print(
-        Fore.GREEN
+        Fore.LIGHTGREEN_EX
         + "\n  You hop on the bus! Do you want to:\n \n    a) Sit down and relax your puppies? \n    b) Stand up near the front?  "
     )
     walk_to_bus_stop()
@@ -235,8 +236,8 @@ def bus():
         return [missed_stop(), Interview.interview()]
     elif initial_answer == "b":
         print(
-            Fore.GREEN
-            + "The ride was a little shaky but you held on and finally made it to your interview!"
+            Fore.LIGHTGREEN_EX
+            + "\n  The ride was a little shaky but you held on and finally made it to your interview!"
         )
         return [stand(), Interview.interview()]
 
@@ -246,7 +247,7 @@ def uber():
     print(Fore.BLUE + "<>" * 73)
     print()
     print(
-        Fore.GREEN
+        Fore.LIGHTGREEN_EX
         + "\n  WTF! You accidently hit uber pool! There are already two other passengers in the car. Do you want to:\n \n a) Still get in \n b) Order another Uber \n c) Hop on your bike \n d) Head to the bus stop.  "
     )
     print("\n    Current Time: ", times.time(), "AM")
@@ -268,7 +269,7 @@ def commute():
     print(Fore.BLUE + "<>" * 73)
     print()
     print(
-        Fore.GREEN
+        Fore.LIGHTGREEN_EX
         + "\n  You have to head to the interview! How are you going to get there?\n \n    a) Uber \n    b) Bike \n    c) Bus "
     )
     print("\n    Current Time: ", times.time(), "AM")
@@ -288,7 +289,7 @@ def roommate_brush():
     print(Fore.BLUE + "<>" * 73)
     print()
     print(
-        Fore.GREEN
+        Fore.LIGHTGREEN_EX
         + "\n  Ew, your mouth feels a little grungy. Do you want to brush your teeth? "
     )
     print("\n    Current Time: ", times.time(), "AM")
@@ -318,7 +319,7 @@ def no_roommate_brush():
     print(Fore.BLUE + "<>" * 73)
     print()
     print(
-        Fore.GREEN
+        Fore.LIGHTGREEN_EX
         + "\n  Ew, your mouth feels a little grungy. Do you want to brush and floss your teeth? "
     )
     print("\n    Current Time: ", times.time(), "AM")
@@ -336,7 +337,7 @@ def breakfast():
     print(Fore.BLUE + "<>" * 73)
     print()
     print(
-        Fore.GREEN
+        Fore.LIGHTGREEN_EX
         + "\n  You walk into the kitchen. Your tummy growls and feels like it is twisting around. You need to decide if you're going to eat. Do you: \n \n    a) Grab something quick? \n    b) Just leave the house now? \n    c) Make a nice big breakfast? "
     )
     print("\n    Current Time: ", times.time(), "AM")
@@ -346,7 +347,7 @@ def breakfast():
         print(Fore.BLUE + "<>" * 73)
         print()
         print(
-            Fore.GREEN
+            Fore.LIGHTGREEN_EX
             + "\n  You open up the cabinet to see what choices you have.\n \n    a) There is one ripe yellow banana left. \n    b) You see a box of strawberry poptarts. \n    c) Brown sugar and cinnamon oatmeal. \n    d) There is a couple slices of bread left to make toast.  "
         )
         print("\n    Current Time: ", times.time(), "AM")
@@ -391,7 +392,7 @@ def breakfast():
         print(Fore.BLUE + "<>" * 73)
         print()
         print(
-            Fore.GREEN
+            Fore.LIGHTGREEN_EX
             + "\n  Great! A home-cooked breakfast is just what you need before a tough interview. What will you eat?\n \n    a) The American classic: bacon and eggs \n    b) The standard pancakes, syrup, and butter. YUM! \n    c) Your ultimate favorite, french toast! "
         )
         print("\n    Current Time: ", times.time(), "AM")
@@ -421,7 +422,7 @@ def shower():
     print(Fore.BLUE + "<>" * 73)
     print()
     print(
-        Fore.GREEN
+        Fore.LIGHTGREEN_EX
         + "\n You walk into the bathroom, smell your armpit and almost faint at the stench! You can either:\n \n    a) Take a detailed shower cleaning every nook and cranny \n    b) Take a quick shower and get to the next task"
     )
     print("\n    Current Time: ", times.time(), "AM")
@@ -431,7 +432,7 @@ def shower():
         print(Fore.BLUE + "<>" * 73)
         print()
         print(
-            Fore.GREEN
+            Fore.LIGHTGREEN_EX
             + "\n  While washing your face, you notice it feels a little scruffy. Would you like to shave?"
         )
         detail()
@@ -446,7 +447,7 @@ def shower():
         print(Fore.BLUE + "<>" * 73)
         print()
         print(
-            Fore.GREEN
+            Fore.LIGHTGREEN_EX
             + "\n You finish taking you shower and turn the water off. Do you want to dry off inside or outside the shower?\n \n    a) Inside \n    b) Outside"
         )
         quick_shower()
@@ -483,7 +484,7 @@ def cod():
     print(Fore.BLUE + "<>" * 73)
     print()
     print(
-        Fore.GREEN
+        Fore.LIGHTGREEN_EX
         + "\n  You decide to play COD but you end the first game in a loss. Do you:\n \n    a) Quit and move onto getting ready? \n    b) Run it back to redeem yourself?"
     )
     play_cod()
@@ -494,7 +495,7 @@ def cod():
         print(Fore.BLUE + "<>" * 73)
         print()
         print(
-            Fore.GREEN
+            Fore.LIGHTGREEN_EX
             + "  You decided to play just one game and be responsible and get ready for your interview! Will you:\n \n    a) Go to the kitchen to eat breakfast? \n    b) Take a shower?  "
         )
         print("\n    Current Time: ", times.time(), "AM")
@@ -508,7 +509,7 @@ def cod():
         print(Fore.BLUE + "<>" * 73)
         print()
         print(
-            Fore.GREEN
+            Fore.LIGHTGREEN_EX
             + "\n  You just couldn't end on a loss, 4 games later here you are. Got to get to the interview! Will you:\n \n    a) Go to the kitchen to eat breakfast? \n    b) Take a shower?"
         )
         cod_play_again()
@@ -527,7 +528,7 @@ def wake_up():
     print(Fore.BLUE + "<>" * 73)
     print()
     print(
-        Fore.GREEN
+        Fore.LIGHTGREEN_EX
         + "\n  Your alarm goes off at 6:30AM. You can either: \n  \n    a) Hit the snooze button \n    b) Hop out of bed"
     )
     print("\n    Current Time: ", times.time(), "AM")
@@ -540,7 +541,7 @@ def wake_up():
         print(Fore.BLUE + "<>" * 73)
         print()
         print(
-            Fore.GREEN
+            Fore.LIGHTGREEN_EX
             + "\n  You slept through the snooze and glance at the time. It is now 7:30! You quickly get up and decide what to do.\n \n    a) Run to the kitchen to get some breakfast? \n    b) Run to the bathroom to take a shower?"
         )
         snooze()
@@ -555,7 +556,7 @@ def wake_up():
         print(Fore.BLUE + "<>" * 73)
         print()
         print(
-            Fore.GREEN
+            Fore.LIGHTGREEN_EX
             + "\n  You excitedly roll out of bed eager to get going. You think about what you should do and what you want to do.\n \n    a) Run to the bathroom to take a shower? \n    b) Rush to your gaming room to play a quick game of the new Call of Duty that you just downloaded."
         )
         print("\n    Current Time: ", times.time(), "AM")
@@ -575,8 +576,8 @@ def adventure_game():
  
  ______     _____     __   __   ______     __   __     ______   __  __     ______     ______        ______     ______     __    __     ______    
 /\  __ \   /\  __-.  /\ \ / /  /\  ___\   /\ "-.\ \   /\__  _\ /\ \/\ \   /\  == \   /\  ___\      /\  ___\   /\  __ \   /\ "-./  \   /\  ___\   
-\ \  __ \  \ \ \/\ \ \ \ \'/   \ \  __\   \ \ \-.  \  \/_/\ \/ \ \ \_\ \  \ \  __<   \ \  __\      \ \ \__ \  \ \  __ \  \ \ \-./\ \  \ \  __\   
- \ \_\ \_\  \ \____-  \ \__|    \ \_____\  \ \_\\"\_\    \ \_\  \ \_____\  \ \_\ \_\  \ \_____\     \ \_____\  \ \_\ \_\  \ \_\ \ \_\  \ \_____\ 
+\ \  __ \  \ \ \/\ \ \ \  \'/   \ \  __\   \ \ \-.  \  \/_/\ \/ \ \ \_\ \  \ \  __<   \ \  __\      \ \ \__ \  \ \  __ \  \ \ \-./\ \  \ \  __\   
+ \ \_\ \_\  \ \____-  \ \__|    \ \_____\  \ \_ \\"\_\    \ \_\  \ \_____\  \ \_\ \_\  \ \_____\     \ \_____\  \ \_\ \_\  \ \_\ \ \_\  \ \_____\ 
   \/_/\/_/   \/____/   \/_/      \/_____/   \/_/ \/_/     \/_/   \/_____/   \/_/ /_/   \/_____/      \/_____/   \/_/\/_/   \/_/  \/_/   \/_____/ 
                                                                                                                                                  
 
@@ -585,10 +586,10 @@ def adventure_game():
     print(Fore.BLUE + "<>" * 73)
     print(Fore.BLUE + "<>" * 73)
     print(
-        Fore.YELLOW
+        Fore.LIGHTYELLOW_EX
         + "\n***                        You have a big job interview at Really Important Company tomorrow at 9:30AM with Jonathan.                          ***\n***                     You went to bed early to make sure that you get there on time. Be careful of the choices you make.                     ***\n***                                     (Everything you choose will determine when you make it there).                                         ***\n"
     )
-    time.sleep(6)
+    time.sleep(4)
     start_game = input("  Ready to play? \n  Enter -  Yes or No:  ").lower()
     if start_game == "yes":
         return wake_up()

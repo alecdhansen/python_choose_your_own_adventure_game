@@ -11,9 +11,16 @@ class Gregg:
         print()
         print(Fore.GREEN + "<>" * 73)
         print(Fore.GREEN + "<>" * 73)
-        return print(
+        print(
             "\n Time to get to work. Code school was a long 12 weeks. You're just happy to start making money!\n\n\n\n\n\n"
         )
+        print("""\n
+ __  __     ______     __  __        ______     ______     ______        __  __     __     ______     ______     _____    
+/\ \_\ \   /\  __ \   /\ \/\ \      /\  __ \   /\  == \   /\  ___\      /\ \_\ \   /\ \   /\  == \   /\  ___\   /\  __-.  
+\ \____ \  \ \ \/\ \  \ \ \_\ \     \ \  __ \  \ \  __<   \ \  __\      \ \  __ \  \ \ \  \ \  __<   \ \  __\   \ \ \/\ \ 
+ \/\_____\  \ \_____\  \ \_____\     \ \_\ \_\  \ \_\ \_\  \ \_____\     \ \_\ \_\  \ \_\  \ \_\ \_\  \ \_____\  \ \____- 
+  \/_____/   \/_____/   \/_____/      \/_/\/_/   \/_/ /_/   \/_____/      \/_/\/_/   \/_/   \/_/ /_/   \/_____/   \/____/ 
+                                                                                                                          \n\n\n""")
 
     def dejected_walk_of_shame(self):
         print()
@@ -21,9 +28,16 @@ class Gregg:
         print()
         print(Fore.RED + "<>" * 73)
         print(Fore.RED + "<>" * 73)
-        return print(
+        print(
             "\n This all happend so fast. You can't believe you didn't get the job. Is there even any hope for me? \n\n\n\n\n\n"
         )
+        print("""\n 
+ __   __     ______             __     ______     ______           ______     ______   ______   ______     ______    
+/\ "-.\ \   /\  __ \           /\ \   /\  __ \   /\  == \         /\  __ \   /\  ___\ /\  ___\ /\  ___\   /\  == \   
+\ \ \-.  \  \ \ \/\ \         _\_\ \  \ \ \/\ \  \ \  __<         \ \ \/\ \  \ \  __\ \ \  __\ \ \  __\   \ \  __<   
+ \ \_\\  "\_\  \ \_____\       /\_____\  \ \_____\  \ \_____\        \ \_____\  \ \_\    \ \_\    \ \_____\  \ \_\ \_\ 
+  \/_/ \/_/   \/_____/       \/_____/   \/_____/   \/_____/         \/_____/   \/_/     \/_/     \/_____/   \/_/ /_/ 
+                                                                                                                    \n\n\n""")
 
     def sandwich_question(self):
         print()

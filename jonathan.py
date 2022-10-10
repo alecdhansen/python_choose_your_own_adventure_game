@@ -1,8 +1,7 @@
 from colorama import Style, Fore, Back, init
 
 
-def jonathan():
-    Question = True
+class Jonathan:
     print()
     print(Fore.CYAN + "<>" * 73)
     print(
@@ -10,22 +9,22 @@ def jonathan():
         "This will help us get to know you based off a few scenarios."
     )
 
-    def next_time():
+    def next_time(self):
         print()
         print(Fore.CYAN + "<>" * 73)
         print("\n Sorry! Better luck next time!")
 
-    def best_answer():
+    def best_answer(self):
         print()
         print(Fore.CYAN + "<>" * 73)
         print("Wow, was that really your best answer?")
 
-    def hire_interviewer():
+    def hire_interviewer(self):
         print()
         print(Fore.CYAN + "<>" * 73)
         print("\n You would be a great fit! Would you consider this job offer?")
 
-    def dead_or_alive():
+    def dead_or_alive(self):
         print()
         print(
             "If you could bring back person or pet from the dead, who would it be? \n a) A family memeber, I miss them so much! \n b) Your favorite music artist, becuase music is not the same without them. \n c) Your favorite pet, you miss having them around."
@@ -36,21 +35,21 @@ def jonathan():
                 Fore.LIGHTYELLOW_EX
                 + "Family is forever! You had the chance to bring a love one back, and you did! We value family and you would fit right in! \n"
             )
-            return hire_interviewer()
+            return self.hire_interviewer()
         elif initial_answer == "b":
             print(
                 Fore.LIGHTYELLOW_EX
                 + "Music changes daily! You can still listen to your favorite artist without them being alive"
             )
-            return best_answer()
+            return self.best_answer()
         elif initial_answer == "c":
             print(
                 Fore.LIGHTYELLOW_EX
                 + "Pets are just like family! We love our fur babies just like our own!"
             )
-            return hire_interviewer()
+            return self.hire_interviewer()
 
-    def plane_crash():
+    def plane_crash(self):
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -63,19 +62,19 @@ def jonathan():
             print(
                 "C'mon man its 2022, everybody should have taken at least one flight by now!"
             )
-            return dead_or_alive
+            return self.dead_or_alive
         elif initial_answer == "b":
             print(
                 "That's smart! Do you typically go skydiving to readily have that avaliable? "
             )
-            return dead_or_alive()
+            return self.dead_or_alive()
         elif initial_answer == "c":
             print(
                 "That doesn't sound like you will survive long with that mindset. Hopefully you have some camping experience!"
             )
-            return dead_or_alive()
+            return self.dead_or_alive()
 
-    def titanic_ship():
+    def titanic_ship(self):
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -88,20 +87,20 @@ def jonathan():
             print(
                 "Smart Answer! A water raft will more than likely will save the lives of many!"
             )
-            return plane_crash()
+            return self.plane_crash()
         if initial_answer == "b":
             print(
                 "Hey it is what it is! You have accpeted you fate, and maybe we will see you on the other side."
             )
-            return plane_crash()
+            return self.plane_crash()
 
         if initial_answer == "c":
             print(
                 "Well it looks like this is a time where being broke was a benefit! Are you now ready to be employed, and generate a steady income?"
             )
-            return plane_crash()
+            return self.plane_crash()
 
-    def cooked_steak():
+    def cooked_steak(self):
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -110,17 +109,17 @@ def jonathan():
         initial_answer = input("\n  Choose  A, B or C :  ").lower()
         if initial_answer == "a":
             print("Great answer! I can tell you have great taste in food!")
-            return titanic_ship()
+            return self.titanic_ship()
         elif initial_answer == "b":
             print("OMG! Are you even human! Who eats raw meat like that! ")
-            return titanic_ship()
+            return self.titanic_ship()
         elif initial_answer == "c":
             print(
                 "Oops! Well I hope I didn't offend you, but I love meat! Maybe we can get you a salad! "
             )
-            return titanic_ship()
+            return self.titanic_ship()
 
-    def sink_or_swim():
+    def sink_or_swim(self):
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -132,18 +131,10 @@ def jonathan():
                 Fore.LIGHTYELLOW_EX
                 + "Hmmm Why are so afraid of the water? I thought everyone knows how to swim! \n"
             )
-            return cooked_steak()
+            return self.cooked_steak()
         elif initial_answer == "b":
             print(
                 Fore.LIGHTYELLOW_EX
                 + "Awesome! We love people who enjoy, and are not afraid of the water! Maybe you can join us at at the Water Park on our next company event. "
             )
-            return cooked_steak()
-
-    while Question == True:
-        sink_or_swim()
-        break
-
-
-if __name__ == "__main__":
-    jonathan()
+            return self.cooked_steak()

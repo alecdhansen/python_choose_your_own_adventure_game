@@ -1,9 +1,11 @@
 from datetime import datetime, timedelta
 
+time = datetime(2022, 10, 10, 6, 30, 0)
+
 
 class Time:
     def __init__(self):
-        self.time = datetime(2022, 10, 10, 6, 30, 0)
+        pass
 
     def detail(self):
         global time
@@ -102,5 +104,5 @@ class Time:
         time += timedelta(minutes=45)
 
 
-if __name__ == "__main__":
-    Time
+# if __name__ == "__main__":
+#     Time

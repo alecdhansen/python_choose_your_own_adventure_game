@@ -1,10 +1,11 @@
 from colorama import Style, Fore, Back, init
 
 
-def gregg():
-    Play = True
+class Gregg:
+    def __init__(self):
+        pass
 
-    def you_got_the_job():
+    def you_got_the_job(self):
         print()
         print(Fore.CYAN + "<>" * 73)
         print()
@@ -14,7 +15,7 @@ def gregg():
             "\n Time to get to work. Code school was a long 12 weeks. You're just happy to start making money!\n\n\n\n\n\n"
         )
 
-    def dejected_walk_of_shame():
+    def dejected_walk_of_shame(self):
         print()
         print(Fore.CYAN + "<>" * 73)
         print()
@@ -24,7 +25,7 @@ def gregg():
             "\n This all happend so fast. You can't believe you didn't get the job. Is there even any hope for me? \n\n\n\n\n\n"
         )
 
-    def sandwich_question():
+    def sandwich_question(self):
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -41,7 +42,7 @@ def gregg():
                 Fore.LIGHTYELLOW_EX
                 + "\n    Interesting answer! I like that. You're hired!...as our new chef!"
             )
-            return you_got_the_job()
+            return self.you_got_the_job()
         elif initial_answer == "b":
             print()
             print(Fore.CYAN + "<>" * 73)
@@ -49,7 +50,7 @@ def gregg():
                 Fore.LIGHTYELLOW_EX
                 + "\n    That's amazing and sounds incredible? How would you like to start out as a senior dev on your first day? You're hired! "
             )
-            return you_got_the_job()
+            return self.you_got_the_job()
         elif initial_answer == "c":
             print()
             print(Fore.CYAN + "<>" * 73)
@@ -57,7 +58,7 @@ def gregg():
                 Fore.LIGHTYELLOW_EX
                 + "\n    I won't even entertain the idea of a hot dog being a sandwich. Get a job somewhere else you loser!"
             )
-            return dejected_walk_of_shame()
+            return self.dejected_walk_of_shame()
         elif initial_answer != "a" or "b" or "c":
             print()
             print(Fore.CYAN + "<>" * 73)
@@ -66,9 +67,9 @@ def gregg():
                 + "\n    I have never heard of that sandwich before!",
                 Fore.LIGHTRED_EX + "    You know where the door is.",
             )
-            return dejected_walk_of_shame()
+            return self.dejected_walk_of_shame()
 
-    def star_trek_or_star_wars():
+    def star_trek_or_star_wars(self):
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -93,7 +94,7 @@ def gregg():
                 Fore.LIGHTGREEN_EX
                 + "\n    Gregg likes this answer. Gregg has always vibed with Spock too."
             )
-            return sandwich_question()
+            return self.sandwich_question()
         elif initial_answer == "b":
             print()
             print(Fore.CYAN + "<>" * 73)
@@ -101,7 +102,7 @@ def gregg():
                 Fore.LIGHTYELLOW_EX
                 + "\n\n    You'll fit right in here. We don't ever let our employees take vacation. \n    You'll never have to see the beach again!\n"
             )
-            return sandwich_question()
+            return self.sandwich_question()
         elif initial_answer == "c":
             print()
             print(Fore.CYAN + "<>" * 73)
@@ -110,7 +111,7 @@ def gregg():
                 + "\n    You're such a bandwagon Star Wars fan! You can't just like someone because they're cute! \n    You need to leave immediately.\n",
                 Fore.LIGHTRED_EX + "   You're fired from this interview!",
             )
-            return dejected_walk_of_shame()
+            return self.dejected_walk_of_shame()
         elif initial_answer == "d":
             print()
             print(Fore.CYAN + "<>" * 73)
@@ -118,9 +119,9 @@ def gregg():
                 Fore.LIGHTYELLOW_EX
                 + "\n\n    Yes I agree with you here. There's something satisfying in yelling, 'blast 'em!'. \n    I do this daily when debugging my code.\n"
             )
-            return sandwich_question()
+            return self.sandwich_question()
 
-    def type_some_code():
+    def type_some_code(self):
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -140,7 +141,7 @@ def gregg():
                 Fore.LIGHTYELLOW_EX
                 + " 'Bless your heart.' \n  You really have no idea what you're doing, do you? We can skip this portion of the interview.",
             )
-            return star_trek_or_star_wars()
+            return self.star_trek_or_star_wars()
         elif initial_answer == "b":
             print()
             print(Fore.CYAN + "<>" * 73)
@@ -158,7 +159,7 @@ def gregg():
                     Fore.LIGHTYELLOW_EX
                     + "\n   Wow great! You killed this! You'll do very well here."
                 )
-                return star_trek_or_star_wars()
+                return self.star_trek_or_star_wars()
             elif answer == "b":
                 print()
                 print(Fore.CYAN + "<>" * 73)
@@ -172,7 +173,7 @@ def gregg():
                 print()
                 print(Fore.RED + "<>" * 73)
                 print(Fore.RED + "<>" * 73)
-                return dejected_walk_of_shame()
+                return self.dejected_walk_of_shame()
             elif answer == "c":
                 print()
                 print(Fore.CYAN + "<>" * 73)
@@ -180,7 +181,7 @@ def gregg():
                     Fore.LIGHTGREEN_EX
                     + "\n    Gregg sees right through you. He knew you were a fraud all along. \n    There's still a chance at this job, but you better be perfect from here on out."
                 )
-                return star_trek_or_star_wars()
+                return self.star_trek_or_star_wars()
         elif initial_answer == "c":
             print()
             print(Fore.CYAN + "<>" * 73)
@@ -204,7 +205,7 @@ def gregg():
                     Fore.LIGHTGREEN_EX
                     + "\n\n Gregg is impressed! He tells you the company is thinking of an overhaul and Turtle just might be what they're looking for.\n"
                 )
-                return star_trek_or_star_wars()
+                return self.star_trek_or_star_wars()
             elif answer == "b":
                 print()
                 print(Fore.CYAN + "<>" * 73)
@@ -215,7 +216,7 @@ def gregg():
                 print(
                     Fore.LIGHTRED_EX + "    Dang it! Why'd you have to be so mean? \n"
                 )
-                return dejected_walk_of_shame()
+                return self.dejected_walk_of_shame()
             elif answer == "c":
                 print()
                 print(Fore.CYAN + "<>" * 73)
@@ -224,9 +225,9 @@ def gregg():
                     + Fore.LIGHTGREEN_EX
                     + "    Gregg can't believe his eyes. This language is incredibly fast! I love Turtle! \n    You smile to yourself and pretend like everything that's just happened is totally normal.\n"
                 )
-                return star_trek_or_star_wars()
+                return self.star_trek_or_star_wars()
 
-    def falsy_values():
+    def falsy_values(self):
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -255,7 +256,7 @@ def gregg():
                     Fore.RED
                     + "\n           Sometimes the silliest questions are the most enlightening. Never forget this!"
                 )
-                return type_some_code()
+                return self.type_some_code()
             elif answer == "no":
                 print()
                 print(Fore.CYAN + "<>" * 73)
@@ -263,7 +264,7 @@ def gregg():
                     Fore.LIGHTYELLOW_EX
                     + "\n\n Good, cause I agree. Woodchucks are serious creatures and so am I!\n"
                 )
-                return star_trek_or_star_wars()
+                return self.star_trek_or_star_wars()
         elif initial_answer == "b":
             print()
             print(Fore.CYAN + "<>" * 73)
@@ -281,12 +282,12 @@ def gregg():
                     Fore.LIGHTYELLOW_EX
                     + "\n\n  Okay listen, no need to pretend. I can spot a liar a mile away. \n"
                 )
-                return type_some_code()
+                return self.type_some_code()
             elif answer == "b":
                 print()
                 print(Fore.CYAN + "<>" * 73)
                 print(Fore.LIGHTYELLOW_EX + "\n\n  I appreciate the honesty... \n")
-                return star_trek_or_star_wars()
+                return self.star_trek_or_star_wars()
         elif initial_answer == "c":
             print()
             print(Fore.CYAN + "<>" * 73)
@@ -294,12 +295,4 @@ def gregg():
                 Fore.LIGHTYELLOW_EX
                 + "\n\n  Nice! You're an idiot! That's incorrect. Look, I'm glad you got here early for this interview but you need to step it up.\n"
             )
-            return type_some_code()
-
-    while Play == True:
-        falsy_values()
-        break
-
-
-if __name__ == "__main__":
-    gregg()
+            return self.type_some_code()

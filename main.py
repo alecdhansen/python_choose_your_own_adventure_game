@@ -1,24 +1,14 @@
 from colorama import Style, Fore, Back, init
-from random import choice
 from datetime import datetime, timedelta
-from alec import alec
-from corey import corey
-from gregg import gregg
-from jonathan import jonathan
-
-# from time import Time
-
-# time_class = Time()
-# print(time_class.detail())
-
-
-# from time import time
+from alec import Alec
+from corey import Corey
+from gregg import Gregg
+from jonathan import Jonathan
+import time
 
 init(autoreset=True)
 
-# time = time()
-
-time = datetime(2022, 10, 10, 6, 30, 0)
+times = datetime(2022, 10, 10, 6, 30, 0)
 answer = ""
 qs_answer = ""
 initial_answer = ""
@@ -28,135 +18,146 @@ name = ""
 play = True
 
 
+# Interview Functions
+def play_alec():
+    alec = Alec()
+    return alec.egg_question()
+
+
+def play_corey():
+    corey = Corey()
+    return corey.penguin_question()
+
+
+def play_gregg():
+    gregg = Gregg()
+    return gregg.falsy_values()
+
+
+def play_jonathan():
+    jonathan = Jonathan()
+    return jonathan.cooked_steak()
+
+
+# Time Functions
 def detail():
-    global time
-    time += timedelta(minutes=30)
+    global times
+    times += timedelta(minutes=30)
 
 
 def quick_shower():
-    global time
-    time += timedelta(minutes=10)
+    global times
+    times += timedelta(minutes=10)
 
 
 def snooze():
-    global time
-    time += timedelta(minutes=60)
+    global times
+    times += timedelta(minutes=60)
 
 
 def play_cod():
-    global time
-    time += timedelta(minutes=20)
+    global times
+    times += timedelta(minutes=20)
 
 
 def cod_play_again():  # if we play multiple games
-    global time
-    time += timedelta(minutes=80)
+    global times
+    times += timedelta(minutes=80)
 
 
 def shave():
-    global time
-    time += timedelta(minutes=15)
+    global times
+    times += timedelta(minutes=15)
 
 
 def brush():
-    global time
-    time += timedelta(minutes=5)
+    global times
+    times += timedelta(minutes=5)
 
 
 def no_brush_lecture():
-    global time
-    time += timedelta(minutes=15)
+    global times
+    times += timedelta(minutes=15)
 
 
 def floss_brush():
-    global time
-    time += timedelta(minutes=10)
+    global times
+    times += timedelta(minutes=10)
 
 
 def no_brush():
-    global time
-    time += timedelta(minutes=0)
+    global times
+    times += timedelta(minutes=0)
 
 
 def banana_poptart_oatmeal():
-    global time
-    time += timedelta(minutes=5)
+    global times
+    times += timedelta(minutes=5)
 
 
 def toast():
-    global time
-    time += timedelta(minutes=30)
+    global times
+    times += timedelta(minutes=30)
 
 
 def bacon_eggs():
-    global time
-    time += timedelta(minutes=30)
+    global times
+    times += timedelta(minutes=30)
 
 
 def pancakes_french_toast():
-    global time
-    time += timedelta(minutes=20)
+    global times
+    times += timedelta(minutes=20)
 
 
 def sprinkler_went_off():
-    global time
-    time += timedelta(minutes=90)
+    global times
+    times += timedelta(minutes=90)
 
 
 def get_in():
-    global time
-    time += timedelta(minutes=45)
+    global times
+    times += timedelta(minutes=45)
 
 
 def another_uber():
-    global time
-    time += timedelta(minutes=25)
+    global times
+    times += timedelta(minutes=25)
 
 
 def missed_stop():
-    global time
-    time += timedelta(minutes=45)
+    global times
+    times += timedelta(minutes=45)
 
 
 def stand():
-    global time
-    time += timedelta(minutes=30)
+    global times
+    times += timedelta(minutes=30)
 
 
 def ride_bike():
-    global time
-    time += timedelta(minutes=45)
+    global times
+    times += timedelta(minutes=45)
 
 
 def walk_to_bus_stop():
-    global time
-    time += timedelta(minutes=10)
+    global times
+    times += timedelta(minutes=10)
 
 
 def missed_stop():
-    global time
-    time += timedelta(minutes=45)
+    global times
+    times += timedelta(minutes=45)
 
 
 def dry_inside():
-    global time
-    time += timedelta(minutes=20)
+    global times
+    times += timedelta(minutes=20)
 
 
 def dry_outside():
-    global time
-    time += timedelta(minutes=45)
-
-
-# class Player():
-#     def __init__(self, name,  hunger, hygiene):
-#         self.name = name
-#         self.hunger = hunger
-#         self.hygiene = hygiene
-
-
-# class Game():
-#     super().__init__(name,  hunger, hygiene)
+    global times
+    times += timedelta(minutes=45)
 
 
 class Interview:
@@ -166,50 +167,36 @@ class Interview:
         print(Fore.BLUE + "<>" * 73)
         print(Fore.BLUE + "<>" * 73)
         print()
-        print("\n    Current Time: ", time.time(), "AM")
+        print("\n    Current Time: ", times.time(), "AM")
         print(
             Fore.LIGHTCYAN_EX
             + "\n   We finally made it Really Important Company. Time for the interview!!!"
         )
         print()
-        if time < datetime(2022, 10, 10, 8, 29, 0):
+        if times < datetime(2022, 10, 10, 8, 29, 0):
             print(
                 "\n     Wow, you're early! Good thing Gregg is also an early bird. \n     Instead of Jonathan interviewing you today, Gregg is going to step in"
             )
-            return gregg()
-        elif time >= datetime(2022, 10, 10, 8, 30, 0) and time < datetime(
+            return play_gregg()
+        elif times >= datetime(2022, 10, 10, 8, 30, 0) and times < datetime(
             2022, 10, 10, 9, 00, 0
         ):
             print(
                 "\n     Nice! You've arrived a tad early. Jonathan isn't here yet so you'll be interviewing with Corey today. \n     Watch out though! He will ask some random questions"
             )
-            return corey()
-        elif time >= datetime(2022, 10, 10, 9, 00, 0) and time < datetime(
+            return play_corey()
+        elif times >= datetime(2022, 10, 10, 9, 00, 0) and times < datetime(
             2022, 10, 10, 9, 30, 0
         ):
             print(
                 "\n     You made it! Jonathan has been expecting you. Head on inside!"
             )
-            return jonathan()
-        elif time >= datetime(2022, 10, 10, 9, 30, 0):
+            return play_jonathan()
+        elif times >= datetime(2022, 10, 10, 9, 30, 0):
             print(
                 "\n     Wow you're late. This is not good. Jonathan couldn't wait any longer and he's gone. \n     Thankfully Alec is here and he can step in and interview you even though YOU'RE VERY LATE."
             )
-            return alec()
-
-
-# interviewers = ["alec", "corey", "gregg", "jonathan"]
-# interviewer = choice(interviewers)
-# print(interviewer)
-# print()
-# if interviewer == "alec":
-#     return alec()
-# elif interviewer == "corey":
-#     return corey()
-# elif interviewer == "gregg":
-#     return gregg()
-# elif interviewer == "jonathan":
-#     return jonathan()
+            return play_alec()
 
 
 def bike():
@@ -231,7 +218,8 @@ def bus():
         Fore.GREEN
         + "\n  You hop on the bus! Do you want to:\n \n    a) Sit down and relax your puppies? \n    b) Stand up near the front?  "
     )
-    print("\n    Current Time: ", time.time(), "AM")
+    walk_to_bus_stop()
+    print("\n    Current Time: ", times.time(), "AM")
     initial_answer = input("\n  Choose -  A or B:  ").lower()
     if initial_answer == "a":
         print()
@@ -244,13 +232,13 @@ def bus():
         )
         print(Fore.RED + "<>" * 73)
         print(Fore.RED + "<>" * 73)
-        return [walk_to_bus_stop(), missed_stop(), Interview.interview()]
+        return [missed_stop(), Interview.interview()]
     elif initial_answer == "b":
         print(
             Fore.GREEN
             + "The ride was a little shaky but you held on and finally made it to your interview!"
         )
-        return [walk_to_bus_stop(), stand(), Interview.interview()]
+        return [stand(), Interview.interview()]
 
 
 def uber():
@@ -261,7 +249,7 @@ def uber():
         Fore.GREEN
         + "\n  WTF! You accidently hit uber pool! There are already two other passengers in the car. Do you want to:\n \n a) Still get in \n b) Order another Uber \n c) Hop on your bike \n d) Head to the bus stop.  "
     )
-    print("\n    Current Time: ", time.time(), "AM")
+    print("\n    Current Time: ", times.time(), "AM")
     answer = input("\n  Choose  A, B, C or D:  ").lower()
     if answer == "a":
         return [get_in(), Interview.interview()]
@@ -271,6 +259,8 @@ def uber():
         return bike()
     elif answer == "d":
         return bus()
+    else:
+        return uber()
 
 
 def commute():
@@ -281,7 +271,7 @@ def commute():
         Fore.GREEN
         + "\n  You have to head to the interview! How are you going to get there?\n \n    a) Uber \n    b) Bike \n    c) Bus "
     )
-    print("\n    Current Time: ", time.time(), "AM")
+    print("\n    Current Time: ", times.time(), "AM")
     initial_answer = input("\n  Choose  A, B, or C:  ").lower()
     if initial_answer == "a":
         return uber()
@@ -289,6 +279,8 @@ def commute():
         return bike()
     elif initial_answer == "c":
         return bus()
+    else:
+        return commute()
 
 
 def roommate_brush():
@@ -299,7 +291,7 @@ def roommate_brush():
         Fore.GREEN
         + "\n  Ew, your mouth feels a little grungy. Do you want to brush your teeth? "
     )
-    print("\n    Current Time: ", time.time(), "AM")
+    print("\n    Current Time: ", times.time(), "AM")
     initial_answer = input("\n     Enter - Yes or No:   ").lower()
     if initial_answer == "yes":
         return [brush(), commute()]
@@ -317,6 +309,8 @@ def roommate_brush():
         print(Fore.RED + "<>" * 73)
         print(Fore.RED + "<>" * 73)
         return commute()
+    else:
+        return roommate_brush()
 
 
 def no_roommate_brush():
@@ -327,12 +321,14 @@ def no_roommate_brush():
         Fore.GREEN
         + "\n  Ew, your mouth feels a little grungy. Do you want to brush and floss your teeth? "
     )
-    print("\n    Current Time: ", time.time(), "AM")
+    print("\n    Current Time: ", times.time(), "AM")
     initial_answer = input("\n     Enter - Yes or No:   ").lower()
     if initial_answer == "yes":
         return [floss_brush(), commute()]
     elif initial_answer == "no":
         return [no_brush(), commute()]
+    else:
+        return no_roommate_brush()
 
 
 def breakfast():
@@ -343,7 +339,7 @@ def breakfast():
         Fore.GREEN
         + "\n  You walk into the kitchen. Your tummy growls and feels like it is twisting around. You need to decide if you're going to eat. Do you: \n \n    a) Grab something quick? \n    b) Just leave the house now? \n    c) Make a nice big breakfast? "
     )
-    print("\n    Current Time: ", time.time(), "AM")
+    print("\n    Current Time: ", times.time(), "AM")
     initial_answer = input("\n  Choose  A, B or C:  ").lower()
     if initial_answer == "a":  # Grab something quick?
         print()
@@ -353,7 +349,7 @@ def breakfast():
             Fore.GREEN
             + "\n  You open up the cabinet to see what choices you have.\n \n    a) There is one ripe yellow banana left. \n    b) You see a box of strawberry poptarts. \n    c) Brown sugar and cinnamon oatmeal. \n    d) There is a couple slices of bread left to make toast.  "
         )
-        print("\n    Current Time: ", time.time(), "AM")
+        print("\n    Current Time: ", times.time(), "AM")
         answer = input("\n  Choose  A, B, C or D:  ").lower()
         if answer == "a":  # banana
             return [banana_poptart_oatmeal(), roommate_brush()]
@@ -388,7 +384,7 @@ def breakfast():
         print(Fore.RED + "<>" * 73)
         print(Fore.RED + "<>" * 73)
         sprinkler_went_off()
-        print("\n    Current Time: ", time.time(), "AM")
+        print("\n    Current Time: ", times.time(), "AM")
         return commute()
     elif initial_answer == "c":  # Make a nice big breakfast?
         print()
@@ -398,7 +394,7 @@ def breakfast():
             Fore.GREEN
             + "\n  Great! A home-cooked breakfast is just what you need before a tough interview. What will you eat?\n \n    a) The American classic: bacon and eggs \n    b) The standard pancakes, syrup, and butter. YUM! \n    c) Your ultimate favorite, french toast! "
         )
-        print("\n    Current Time: ", time.time(), "AM")
+        print("\n    Current Time: ", times.time(), "AM")
         answer = input("\n  Choose  A, B or C:  ").lower()
         if answer == "a":  # Bacon & Eggs
             print()
@@ -428,7 +424,7 @@ def shower():
         Fore.GREEN
         + "\n You walk into the bathroom, smell your armpit and almost faint at the stench! You can either:\n \n    a) Take a detailed shower cleaning every nook and cranny \n    b) Take a quick shower and get to the next task"
     )
-    print("\n    Current Time: ", time.time(), "AM")
+    print("\n    Current Time: ", times.time(), "AM")
     initial_answer = input("\n Choose -  A or B:  ").lower()
     if initial_answer == "a":  # Detail shower
         print()
@@ -439,7 +435,7 @@ def shower():
             + "\n  While washing your face, you notice it feels a little scruffy. Would you like to shave?"
         )
         detail()
-        print("\n    Current Time: ", time.time(), "AM")
+        print("\n    Current Time: ", times.time(), "AM")
         answer = input("\n  Enter -  Yes or No:  ").lower()
         if answer == "yes":
             return [shave(), breakfast()]
@@ -454,9 +450,19 @@ def shower():
             + "\n You finish taking you shower and turn the water off. Do you want to dry off inside or outside the shower?\n \n    a) Inside \n    b) Outside"
         )
         quick_shower()
-        print("\n    Current Time: ", time.time(), "AM")
+        print("\n    Current Time: ", times.time(), "AM")
         qs_answer = input("\n Choose -  A or B:  ").lower()
-        if qs_answer == "b":  # Outside
+        if qs_answer == "a":  # Inside
+            print()
+            print(Fore.BLUE + "<>" * 73)
+            print()
+            print(
+                Fore.YELLOW
+                + "\n             As you're toweling off, you realize you need to throw some towels in the wash before\n                 you leave the house. You run to the laundry room and throw some towels in."
+            )
+            print()
+            return [dry_inside(), breakfast()]
+        elif qs_answer == "b":  # Outside
             print()
             print(Fore.BLUE + "<>" * 73)
             print()
@@ -470,16 +476,6 @@ def shower():
             print(Fore.RED + "<>" * 73)
             print(Fore.RED + "<>" * 73)
             return [dry_outside(), breakfast()]
-        elif qs_answer == "a":  # Inside
-            print()
-            print(Fore.BLUE + "<>" * 73)
-            print()
-            print(
-                Fore.YELLOW
-                + "\n             As you're toweling off, you realize you need to throw some towels in the wash before\n                 you leave the house. You run to the laundry room and throw some towels in."
-            )
-            print()
-            return [dry_inside(), breakfast()]
 
 
 def cod():
@@ -491,7 +487,7 @@ def cod():
         + "\n  You decide to play COD but you end the first game in a loss. Do you:\n \n    a) Quit and move onto getting ready? \n    b) Run it back to redeem yourself?"
     )
     play_cod()
-    print("\n    Current Time: ", time.time(), "AM")
+    print("\n    Current Time: ", times.time(), "AM")
     initial_answer = input("\n  Choose -  A or B:  ").lower()
     if initial_answer == "a":  # Quit and move onto getting ready?
         print()
@@ -501,7 +497,7 @@ def cod():
             Fore.GREEN
             + "  You decided to play just one game and be responsible and get ready for your interview! Will you:\n \n    a) Go to the kitchen to eat breakfast? \n    b) Take a shower?  "
         )
-        print("\n    Current Time: ", time.time(), "AM")
+        print("\n    Current Time: ", times.time(), "AM")
         answer = input("\n  Choose -  A or B:  ").lower()
         if answer == "a":  # Go to the kitchen to eat breakfast?
             return breakfast()
@@ -516,12 +512,14 @@ def cod():
             + "\n  You just couldn't end on a loss, 4 games later here you are. Got to get to the interview! Will you:\n \n    a) Go to the kitchen to eat breakfast? \n    b) Take a shower?"
         )
         cod_play_again()
-        print("\n    Current Time: ", time.time(), "AM")
+        print("\n    Current Time: ", times.time(), "AM")
         answer = input("\n  Choose -  A or B:  ").lower()
         if answer == "a":  # Go to the kitchen to eat breakfast?
             return breakfast()
         elif answer == "b":  # Take a shower?
             return shower()
+    else:
+        return cod()
 
 
 def wake_up():
@@ -532,7 +530,7 @@ def wake_up():
         Fore.GREEN
         + "\n  Your alarm goes off at 6:30AM. You can either: \n  \n    a) Hit the snooze button \n    b) Hop out of bed"
     )
-    print("\n    Current Time: ", time.time(), "AM")
+    print("\n    Current Time: ", times.time(), "AM")
 
     answer = input("\n  Choose -  A or B:  ").lower()
     if not answer in ("a", "b"):
@@ -546,14 +544,12 @@ def wake_up():
             + "\n  You slept through the snooze and glance at the time. It is now 7:30! You quickly get up and decide what to do.\n \n    a) Run to the kitchen to get some breakfast? \n    b) Run to the bathroom to take a shower?"
         )
         snooze()
-        print("\n    Current Time: ", time.time(), "AM")
+        print("\n    Current Time: ", times.time(), "AM")
         answer = input("\n  Choose -  A or B:  ").lower()
         if answer == "a":  # Run to the kitchen to get some breakfast?
             return breakfast()
         elif answer == "b":  # Run to the bathroom to take a shower?
             return shower()
-        else:
-            print("try again")
     elif answer == "b":  # Hop out of bed
         print()
         print(Fore.BLUE + "<>" * 73)
@@ -562,7 +558,7 @@ def wake_up():
             Fore.GREEN
             + "\n  You excitedly roll out of bed eager to get going. You think about what you should do and what you want to do.\n \n    a) Run to the bathroom to take a shower? \n    b) Rush to your gaming room to play a quick game of the new Call of Duty that you just downloaded."
         )
-        print("\n    Current Time: ", time.time(), "AM")
+        print("\n    Current Time: ", times.time(), "AM")
         answer = input("\n  Choose -  A or B:  ").lower()
         if answer == "a":  # Run to the bathroom to take a shower?
             return shower()
@@ -592,23 +588,21 @@ def adventure_game():
         Fore.YELLOW
         + "\n***                        You have a big job interview at Really Important Company tomorrow at 9:30AM with Jonathan.                          ***\n***                     You went to bed early to make sure that you get there on time. Be careful of the choices you make.                     ***\n***                                     (Everything you choose will determine when you make it there).                                         ***\n"
     )
+    time.sleep(6)
     start_game = input("  Ready to play? \n  Enter -  Yes or No:  ").lower()
-    # if start_game != "yes" or "i":
     if start_game == "yes":
         return wake_up()
-    elif start_game == "i":
-        return Interview.interview()  # add shortcut to interview!
-    elif start_game == "alec":
-        return alec()
-    elif start_game == "corey":
-        return corey()
-    elif start_game == "gregg":
-        return gregg()
-    elif start_game == "jonathan":
-        return jonathan()
+    elif start_game == "alec":  # Interview shortcut to Alec
+        return play_alec()
+    elif start_game == "corey":  # Interview shortcut to Corey
+        return play_corey()
+    elif start_game == "gregg":  # Interview shortcut to Gregg
+        return play_gregg()
+    elif start_game == "jonathan":  # Interview shortcut to Jonathan
+        return play_jonathan()
     elif start_game == "no":
         print("Have a nice day!")
-    elif start_game != "yes" or "i" or "no":
+    else:
         print("That aint right!")
         return adventure_game()
 

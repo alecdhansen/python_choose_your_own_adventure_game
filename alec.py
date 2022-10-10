@@ -1,13 +1,11 @@
 from colorama import Style, Fore, Back, init
 
 
-def alec():
-    # def __init__(self):
-    #     pass
+class Alec:
+    def __init__(self):
+        pass
 
-    Play = True
-
-    def you_got_the_job():
+    def you_got_the_job(self):
         print()
         print(Fore.CYAN + "<>" * 73)
         print()
@@ -17,7 +15,7 @@ def alec():
             "\n NICE! You got the job! Congrats! Those 12 weeks of code school paid off.\n\n\n\n\n\n"
         )
 
-    def dejected_walk_of_shame():
+    def dejected_walk_of_shame(self):
         print()
         print(Fore.CYAN + "<>" * 73)
         print()
@@ -27,7 +25,7 @@ def alec():
             "\n You can't believe this has happened. You really wanted this job, but you've come to realize coding must not be your thing. \n You head out the door into the rain and dejectedly walk home.\n\n\n\n\n\n"
         )
 
-    def brick_question():
+    def brick_question(self):
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -55,27 +53,27 @@ def alec():
                 Fore.LIGHTYELLOW_EX
                 + "\n Interesting answer! I like that. You're hired!"
             )
-            return you_got_the_job()
+            return self.you_got_the_job()
         elif initial_answer == "b":
             print(
                 Fore.LIGHTYELLOW_EX
                 + "\n You really can't let people walk all over you in life and be on top of you all the time. \n You're not the kind of person we want working here going forward."
             )
-            return dejected_walk_of_shame()
+            return self.dejected_walk_of_shame()
         elif initial_answer == "c":
             print(
                 Fore.LIGHTYELLOW_EX
                 + "\n Life isn't always about teamwork. Sometimes you need to learn to complete tasks all on your own. \n You can't always rely on others. I'm sorry, but this job isn't the right fit for you."
             )
-            return dejected_walk_of_shame()
+            return self.dejected_walk_of_shame()
         elif initial_answer == "hatebricks":
             print(
                 Fore.LIGHTYELLOW_EX
                 + "\n Wow! I hate bricks too! This is increcible! \n I'm going to love working with you. In fact, let's start you out at $100,000/month. \n Does that sound good? Great!"
             )
-            return you_got_the_job()
+            return self.you_got_the_job()
 
-    def super_hard_math_question():
+    def super_hard_math_question(self):
         print()
         print(Fore.CYAN + "<>" * 73)
         print("\n Alec shuffles his papers and prepares his next question.\n")
@@ -92,27 +90,27 @@ def alec():
         ).lower()
         if initial_answer == "a":
             print(Fore.LIGHTYELLOW_EX + "\n Nope. Wrong. Not even close.")
-            return brick_question()
+            return self.brick_question()
         elif initial_answer == "b":
             print(
                 Fore.LIGHTYELLOW_EX
                 + "\n That's correct! Wow you are VERY smart. I'll keep this in mind."
             )
-            return brick_question()
+            return self.brick_question()
         elif initial_answer == "c":
             print(
                 Fore.LIGHTYELLOW_EX
                 + "\n That's incorrect. It doesn't even make sense for you to continue on at this point. \n Please leave the interview now."
             )
-            return dejected_walk_of_shame()
+            return self.dejected_walk_of_shame()
         elif initial_answer == "d":
             print(
                 Fore.LIGHTYELLOW_EX
                 + "\n Look, that's completely false. Remember the acronym 'AGHLE'. All good hens lay eggs. \n I like how you think outside of the box, though!"
             )
-            return brick_question()
+            return self.brick_question()
 
-    def downstairs():
+    def downstairs(self):
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -127,7 +125,7 @@ def alec():
                 Fore.GREEN
                 + "\n Okay great, back to the interview. Let's hope Alec doesn't notice you forgot why you came downstairs."
             )
-            return super_hard_math_question()
+            return self.super_hard_math_question()
         elif initial_answer == "b":
             print()
             print(Fore.CYAN + "<>" * 73)
@@ -143,7 +141,7 @@ def alec():
                     Fore.GREEN
                     + "\n *KNOCK KNOCK KNOCK* You wait... and don't hear anything. \n At this point you've been gone awhile and are starting to get a little spooked. Let's head back upstairs."
                 )
-                return super_hard_math_question()
+                return self.super_hard_math_question()
             elif answer == "b":
                 print()
                 print(Fore.CYAN + "<>" * 73)
@@ -151,7 +149,7 @@ def alec():
                     Fore.GREEN
                     + "\n You get down on all fours, peak underneath and *BOOM*. \n The door opens in your face. You take a second to collect yourself. \n Surely your nose is broken. There's no way you can carry on with the interview now"
                 )
-                return dejected_walk_of_shame()
+                return self.dejected_walk_of_shame()
             elif answer == "c":
                 print(
                     Fore.GREEN
@@ -159,7 +157,7 @@ def alec():
                     Fore.LIGHTCYAN_EX
                     + "   TELL THEM THAT YOU 'hatebricks' WHEN THEY ASK YOU ABOUT BRICKS!\n      This is VERY important.\n",
                 )
-                return super_hard_math_question()
+                return self.super_hard_math_question()
         elif initial_answer == "c":
             print()
             print(Fore.CYAN + "<>" * 73)
@@ -184,21 +182,21 @@ def alec():
                 print(
                     "\n This isn't good. Rog punches you in the face so hard your nose breaks. \n There's no way you can complete this interview now.\n"
                 )
-                return dejected_walk_of_shame()
+                return self.dejected_walk_of_shame()
             elif answer == "b":
                 print(
                     "\n  'Now we're talking' He says. 'TELL THEM THAT YOU 'hatebricks' WHEN THEY ASK YOU ABOUT BRICKS!'",
                     Fore.GREEN + "\n   You thank him and head back upstairs!\n",
                 )
-                return super_hard_math_question()
+                return self.super_hard_math_question()
             elif answer == "c":
                 print(
                     "\n  'Excellent. I was hoping you'd beg.' He said. 'Here's the secret: TELL THEM THAT YOU 'hatebricks' WHEN THEY ASK YOU ABOUT BRICKS! \n   This is VERY important."
                 )
                 print(Fore.GREEN + "\n   You thank him and head back upstairs!\n")
-                return super_hard_math_question()
+                return self.super_hard_math_question()
 
-    def egg_question():
+    def egg_question(self):
         print()
         print(Fore.CYAN + "<>" * 73)
         print(Fore.LIGHTYELLOW_EX + "\n\n First question! How do you like your eggs?\n")
@@ -219,13 +217,13 @@ def alec():
                     Fore.LIGHTYELLOW_EX
                     + "\n Hmm, noted. That is disgusting! You really should rethink your egg dressing choices. \n In fact, that is making me quite nauseous thinking about it. \n Run downstairs and grab me a water bottle out of the vending machine."
                 )
-                return downstairs()
+                return self.downstairs()
             elif answer == "no":
                 print(
                     Fore.LIGHTYELLOW_EX
                     + "\n Okay good. I really can't get along with people who do that!"
                 )
-                return super_hard_math_question()
+                return self.super_hard_math_question()
         elif initial_answer == "b":
             print(
                 Fore.LIGHTYELLOW_EX
@@ -239,24 +237,16 @@ def alec():
                     Fore.LIGHTYELLOW_EX
                     + "\n Ah! A true artisan! Let me write that down. This is very impressive."
                 )
-                return super_hard_math_question()
+                return self.super_hard_math_question()
             elif answer == "b":
                 print(
                     Fore.LIGHTYELLOW_EX
                     + "\n OK, interesting. Not my cup of tea...but to each his own."
                 )
-                return super_hard_math_question()
+                return self.super_hard_math_question()
         elif initial_answer == "c":
             print(
                 Fore.LIGHTYELLOW_EX
                 + "\n That's a little freaky. In fact, that is making me quite nauseous thinking about it. \n Run downstairs and grab me a bottle or water out of the vending machine."
             )
-            return downstairs()
-
-    while Play == True:
-        egg_question()
-        break
-
-
-if __name__ == "__main__":
-    alec()
+            return self.downstairs()

@@ -6,8 +6,12 @@ from corey import corey
 from gregg import gregg
 from jonathan import jonathan
 
-# from gregg import gregg
-# from jonathan import jonathan
+# from time import Time
+
+# time_class = Time()
+# print(time_class.detail())
+
+
 # from time import time
 
 init(autoreset=True)
@@ -21,6 +25,7 @@ initial_answer = ""
 hunger = 0
 hygiene = 0
 name = ""
+play = True
 
 
 def detail():
@@ -143,8 +148,6 @@ def dry_outside():
     time += timedelta(minutes=45)
 
 
-play = True
-
 # class Player():
 #     def __init__(self, name,  hunger, hygiene):
 #         self.name = name
@@ -156,40 +159,43 @@ play = True
 #     super().__init__(name,  hunger, hygiene)
 
 
-def interview():
-    print()
-    print(Fore.BLUE + "<>" * 73)
-    print(Fore.BLUE + "<>" * 73)
-    print(Fore.BLUE + "<>" * 73)
-    print()
-    print("\n    Current Time: ", time.time(), "AM")
-    print(
-        Fore.LIGHTCYAN_EX
-        + "\n   We finally made it Really Important Company. Time for the interview!!!"
-    )
-    print()
-    if time < datetime(2022, 10, 10, 8, 29, 0):
+class Interview:
+    def interview():
+        print()
+        print(Fore.BLUE + "<>" * 73)
+        print(Fore.BLUE + "<>" * 73)
+        print(Fore.BLUE + "<>" * 73)
+        print()
+        print("\n    Current Time: ", time.time(), "AM")
         print(
-            "\n     Wow, you're early! Good thing Gregg is also an early bird. \n     Instead of Jonathan interviewing you today, Gregg is going to step in"
+            Fore.LIGHTCYAN_EX
+            + "\n   We finally made it Really Important Company. Time for the interview!!!"
         )
-        return gregg()
-    elif time >= datetime(2022, 10, 10, 8, 30, 0) and time < datetime(
-        2022, 10, 10, 9, 00, 0
-    ):
-        print(
-            "\n     Nice! You've arrived a tad early. Jonathan isn't here yet so you'll be interviewing with Corey today. \n     Watch out though! He will ask some random questions"
-        )
-        return corey()
-    elif time >= datetime(2022, 10, 10, 9, 00, 0) and time < datetime(
-        2022, 10, 10, 9, 30, 0
-    ):
-        print("\n     You made it! Jonathan has been expecting you. Head on inside!")
-        return jonathan()
-    elif time >= datetime(2022, 10, 10, 9, 30, 0):
-        print(
-            "\n     Wow you're late. This is not good. Jonathan couldn't wait any longer and he's gone. \n     Thankfully Alec is here and he can step in and interview you even though YOU'RE VERY LATE."
-        )
-        return alec()
+        print()
+        if time < datetime(2022, 10, 10, 8, 29, 0):
+            print(
+                "\n     Wow, you're early! Good thing Gregg is also an early bird. \n     Instead of Jonathan interviewing you today, Gregg is going to step in"
+            )
+            return gregg()
+        elif time >= datetime(2022, 10, 10, 8, 30, 0) and time < datetime(
+            2022, 10, 10, 9, 00, 0
+        ):
+            print(
+                "\n     Nice! You've arrived a tad early. Jonathan isn't here yet so you'll be interviewing with Corey today. \n     Watch out though! He will ask some random questions"
+            )
+            return corey()
+        elif time >= datetime(2022, 10, 10, 9, 00, 0) and time < datetime(
+            2022, 10, 10, 9, 30, 0
+        ):
+            print(
+                "\n     You made it! Jonathan has been expecting you. Head on inside!"
+            )
+            return jonathan()
+        elif time >= datetime(2022, 10, 10, 9, 30, 0):
+            print(
+                "\n     Wow you're late. This is not good. Jonathan couldn't wait any longer and he's gone. \n     Thankfully Alec is here and he can step in and interview you even though YOU'RE VERY LATE."
+            )
+            return alec()
 
 
 # interviewers = ["alec", "corey", "gregg", "jonathan"]
@@ -214,7 +220,7 @@ def bike():
         Fore.GREEN
         + "Wow you're healthy! You show up to the interview (a little sweaty)"
     )
-    return [ride_bike(), interview()]
+    return [ride_bike(), Interview.interview()]
 
 
 def bus():
@@ -238,13 +244,13 @@ def bus():
         )
         print(Fore.RED + "<>" * 73)
         print(Fore.RED + "<>" * 73)
-        return [walk_to_bus_stop(), missed_stop(), interview()]
+        return [walk_to_bus_stop(), missed_stop(), Interview.interview()]
     elif initial_answer == "b":
         print(
             Fore.GREEN
             + "The ride was a little shaky but you held on and finally made it to your interview!"
         )
-        return [walk_to_bus_stop(), stand(), interview()]
+        return [walk_to_bus_stop(), stand(), Interview.interview()]
 
 
 def uber():
@@ -258,9 +264,9 @@ def uber():
     print("\n    Current Time: ", time.time(), "AM")
     answer = input("\n  Choose  A, B, C or D:  ").lower()
     if answer == "a":
-        return [get_in(), interview()]
+        return [get_in(), Interview.interview()]
     elif answer == "b":
-        return [another_uber(), interview()]
+        return [another_uber(), Interview.interview()]
     elif answer == "c":
         return bike()
     elif answer == "d":
@@ -591,7 +597,7 @@ def adventure_game():
     if start_game == "yes":
         return wake_up()
     elif start_game == "i":
-        return interview()  # add shortcut to interview!
+        return Interview.interview()  # add shortcut to interview!
     elif start_game == "alec":
         return alec()
     elif start_game == "corey":

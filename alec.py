@@ -2,6 +2,9 @@ from colorama import Style, Fore, Back, init
 
 
 def alec():
+    # def __init__(self):
+    #     pass
+
     Play = True
 
     def you_got_the_job():
@@ -122,7 +125,7 @@ def alec():
         if initial_answer == "a":
             print(
                 Fore.GREEN
-                    + "\n Okay great, back to the interview. Let's hope Alec doesn't notice you forgot why you came downstairs."
+                + "\n Okay great, back to the interview. Let's hope Alec doesn't notice you forgot why you came downstairs."
             )
             return super_hard_math_question()
         elif initial_answer == "b":
@@ -130,7 +133,7 @@ def alec():
             print(Fore.CYAN + "<>" * 73)
             print(
                 Fore.GREEN
-                    + "\n Alright. Keep heading down the hall. Surely nothing bad could be behind this door, right? Do you:"
+                + "\n Alright. Keep heading down the hall. Surely nothing bad could be behind this door, right? Do you:"
             )
             answer = input(
                 "\n     a) Knock on the door \n     b) Try and look undernearth \n     c) Head straight in\n\n     Choose -  A, B, or C:  "
@@ -152,8 +155,9 @@ def alec():
             elif answer == "c":
                 print(
                     Fore.GREEN
-                    + "\n  You've just entered the room. You see a piece of paper on a table with the words \n", Fore.LIGHTCYAN_EX
-                    + "   TELL THEM THAT YOU 'hatebricks' WHEN THEY ASK YOU ABOUT BRICKS!\n      This is VERY important.\n"
+                    + "\n  You've just entered the room. You see a piece of paper on a table with the words \n",
+                    Fore.LIGHTCYAN_EX
+                    + "   TELL THEM THAT YOU 'hatebricks' WHEN THEY ASK YOU ABOUT BRICKS!\n      This is VERY important.\n",
                 )
                 return super_hard_math_question()
         elif initial_answer == "c":
@@ -182,7 +186,10 @@ def alec():
                 )
                 return dejected_walk_of_shame()
             elif answer == "b":
-                print("\n  'Now we're talking' He says. 'TELL THEM THAT YOU 'hatebricks' WHEN THEY ASK YOU ABOUT BRICKS!'", Fore.GREEN + "\n   You thank him and head back upstairs!\n")
+                print(
+                    "\n  'Now we're talking' He says. 'TELL THEM THAT YOU 'hatebricks' WHEN THEY ASK YOU ABOUT BRICKS!'",
+                    Fore.GREEN + "\n   You thank him and head back upstairs!\n",
+                )
                 return super_hard_math_question()
             elif answer == "c":
                 print(

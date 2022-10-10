@@ -524,6 +524,7 @@ def cod():
 
 
 def wake_up():
+    time.sleep(1)
     print()
     print(Fore.BLUE + "<>" * 73)
     print()
@@ -537,6 +538,7 @@ def wake_up():
     if not answer in ("a", "b"):
         return wake_up()
     elif answer == "a":  # Hit the snooze button
+        time.sleep(1)
         print()
         print(Fore.BLUE + "<>" * 73)
         print()

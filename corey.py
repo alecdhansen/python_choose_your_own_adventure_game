@@ -1,8 +1,10 @@
 from colorama import Style, Fore, Back, init
+import time
 
 
 class Corey:
     def you_got_the_job(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print()
@@ -21,6 +23,7 @@ class Corey:
                                                                                                                           \n\n\n""")
 
     def ur_fired(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print()
@@ -39,6 +42,7 @@ class Corey:
                                                                                                                     \n\n\n""")
 
     def final_question(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print(Fore.LIGHTYELLOW_EX + "\n\n Alright final question. Green or Blue?\n")
@@ -57,6 +61,7 @@ class Corey:
             return self.you_got_the_job()
 
     def pool_question(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -79,6 +84,7 @@ class Corey:
             return self.final_question()
 
     def biscuit_question(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -99,6 +105,7 @@ class Corey:
             return self.pool_question()
 
     def video_game_question(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -133,6 +140,7 @@ class Corey:
             return self.biscuit_question()
 
     def penguin_question(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print(

@@ -1,4 +1,5 @@
 from colorama import Style, Fore, Back, init
+import time
 
 
 class Jonathan:
@@ -28,6 +29,7 @@ class Jonathan:
 
 
     def best_answer(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print()
@@ -45,6 +47,7 @@ class Jonathan:
 
 
     def hire_interviewer(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print()
@@ -61,6 +64,7 @@ class Jonathan:
                                                                                                                           \n\n\n""")
 
     def dead_or_alive(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -87,6 +91,7 @@ class Jonathan:
             return self.hire_interviewer()
 
     def plane_crash(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -112,6 +117,7 @@ class Jonathan:
             return self.dead_or_alive()
 
     def titanic_ship(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -138,6 +144,7 @@ class Jonathan:
             return self.plane_crash()
 
     def cooked_steak(self):
+        time.sleep(1)
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -157,6 +164,7 @@ class Jonathan:
             return self.titanic_ship()
 
     def sink_or_swim(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print(

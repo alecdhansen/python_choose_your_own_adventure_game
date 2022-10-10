@@ -1,4 +1,5 @@
 from colorama import Style, Fore, Back, init
+import time
 
 
 class Gregg:
@@ -6,6 +7,7 @@ class Gregg:
         pass
 
     def you_got_the_job(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print()
@@ -23,6 +25,7 @@ class Gregg:
                                                                                                                           \n\n\n""")
 
     def dejected_walk_of_shame(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print()
@@ -40,6 +43,7 @@ class Gregg:
                                                                                                                     \n\n\n""")
 
     def sandwich_question(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -84,6 +88,7 @@ class Gregg:
             return self.dejected_walk_of_shame()
 
     def star_trek_or_star_wars(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -136,6 +141,7 @@ class Gregg:
             return self.sandwich_question()
 
     def type_some_code(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -242,6 +248,7 @@ class Gregg:
                 return self.star_trek_or_star_wars()
 
     def falsy_values(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -262,6 +269,7 @@ class Gregg:
                 Fore.GREEN + "\n          < You start laughing >",
                 Fore.LIGHTYELLOW_EX + "\n Do you think this is a silly question? \n",
             )
+            time.sleep(2)
             answer = input("     Enter -  Yes or No  ").lower()
             if answer == "yes":
                 print()

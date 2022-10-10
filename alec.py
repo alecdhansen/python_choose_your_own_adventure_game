@@ -1,4 +1,6 @@
 from colorama import Style, Fore, Back, init
+import time
+
 
 
 class Alec:
@@ -6,6 +8,7 @@ class Alec:
         pass
 
     def you_got_the_job(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print()
@@ -23,6 +26,7 @@ class Alec:
                                                                                                                           \n\n\n""")
 
     def dejected_walk_of_shame(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print()
@@ -40,6 +44,7 @@ class Alec:
                                                                                                                     \n\n\n""")
 
     def brick_question(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -88,6 +93,7 @@ class Alec:
             return self.you_got_the_job()
 
     def super_hard_math_question(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print("\n Alec shuffles his papers and prepares his next question.\n")
@@ -125,6 +131,7 @@ class Alec:
             return self.brick_question()
 
     def downstairs(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print(
@@ -211,6 +218,7 @@ class Alec:
                 return self.super_hard_math_question()
 
     def egg_question(self):
+        time.sleep(2)
         print()
         print(Fore.CYAN + "<>" * 73)
         print(Fore.LIGHTYELLOW_EX + "\n\n First question! How do you like your eggs?\n")

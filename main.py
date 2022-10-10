@@ -592,6 +592,14 @@ def adventure_game():
         return wake_up()
     elif start_game == "i":
         return interview()  # add shortcut to interview!
+    elif start_game == "alec":
+        return alec()
+    elif start_game == "corey":
+        return corey()
+    elif start_game == "gregg":
+        return gregg()
+    elif start_game == "jonathan":
+        return jonathan()
     elif start_game == "no":
         print("Have a nice day!")
     elif start_game != "yes" or "i" or "no":

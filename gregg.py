@@ -63,8 +63,8 @@ def gregg():
             print(Fore.CYAN + "<>" * 73)
             print(
                 Fore.LIGHTYELLOW_EX
-                + "\n    I have never heard of that sandwich before!", Fore.LIGHTRED_EX
-                +  "    You know where the door is."
+                + "\n    I have never heard of that sandwich before!",
+                Fore.LIGHTRED_EX + "    You know where the door is.",
             )
             return dejected_walk_of_shame()
 
@@ -84,7 +84,7 @@ def gregg():
             + "This was definitely an unexpected question but you feel very prepared for this moment."
         )
         initial_answer = input(
-            "\n     a) Star Trek, because I want to live long and prosper just like Spock. \n     b) Star Trek because I don't like sand. It's coarse and rough and irritating and it gets everywhere. \n     c) Star Wars because of Baby Yoda \n     d) Star Wars because blasters > phasers \n\n     Choose  A, B, C or D:  "
+            "\n     a) Star Trek, because I want to live long and prosper just like Spock. \n     b) Star Trek, because I don't like sand. It's coarse and rough and irritating and it gets everywhere. \n     c) Star Wars, because of Baby Yoda \n     d) Star Wars, because blasters > phasers \n\n     Choose  A, B, C or D:  "
         ).lower()
         if initial_answer == "a":
             print()
@@ -107,8 +107,8 @@ def gregg():
             print(Fore.CYAN + "<>" * 73)
             print(
                 Fore.LIGHTYELLOW_EX
-                + "\n    You're such a bandwagon Star Wars fan! You can't just like someone because they're cute! \n    You need to leave immediately.\n", Fore.LIGHTRED_EX
-                + "   You're fired from this interview!"
+                + "\n    You're such a bandwagon Star Wars fan! You can't just like someone because they're cute! \n    You need to leave immediately.\n",
+                Fore.LIGHTRED_EX + "   You're fired from this interview!",
             )
             return dejected_walk_of_shame()
         elif initial_answer == "d":
@@ -126,7 +126,7 @@ def gregg():
         print(
             Fore.LIGHTYELLOW_EX
             + "\n Alright let's get our hands dirty. Let's open up my terminal on this nice company computer.",
-            "\n\n     Do you:\n"
+            "\n\n     Do you:\n",
         )
         initial_answer = input(
             "     a) Panic because you definitely have forgotten how to open the terminal \n     b) Command + spacebar + 'terminal' that bad boy in no time at all \n     c) Shakily stumble over a few keys and accidently type 'Turtle'\n\n     Choose  A, B or C:  "
@@ -136,14 +136,17 @@ def gregg():
             print(Fore.CYAN + "<>" * 73)
             print(
                 Fore.LIGHTGREEN_EX
-                + "\n  Gregg looks at you and smiles like a grandmother to her grandchild, and says.", Fore.LIGHTYELLOW_EX + " 'Bless your heart.' \n  You really have no idea what you're doing, do you? We can skip this portion of the interview."
+                + "\n  Gregg looks at you and smiles like a grandmother to her grandchild, and says.",
+                Fore.LIGHTYELLOW_EX
+                + " 'Bless your heart.' \n  You really have no idea what you're doing, do you? We can skip this portion of the interview.",
             )
             return star_trek_or_star_wars()
         elif initial_answer == "b":
             print()
             print(Fore.CYAN + "<>" * 73)
             print(
-                Fore.LIGHTYELLOW_EX + "\n Okay speedy! Create a directory for me to keep files of our past Coronavirus policies."
+                Fore.LIGHTYELLOW_EX
+                + "\n Okay speedy! Create a directory for me to keep files of our past Coronavirus policies."
             )
             answer = input(
                 "\n     a) You type 'mkdir covid_19_policies' \n     b) You type 'mkdirn virus --all' \n     c) You panic and realize the only thing you know how to do on a computer is open the terminl. \n\n     Choose  A, B or C:  "
@@ -174,7 +177,8 @@ def gregg():
                 print()
                 print(Fore.CYAN + "<>" * 73)
                 print(
-                    Fore.LIGHTGREEN_EX + "\n    Gregg sees right through you. He knew you were a fraud all along. \n    There's still a chance at this job, but you better be perfect from here on out."
+                    Fore.LIGHTGREEN_EX
+                    + "\n    Gregg sees right through you. He knew you were a fraud all along. \n    There's still a chance at this job, but you better be perfect from here on out."
                 )
                 return star_trek_or_star_wars()
         elif initial_answer == "c":
@@ -182,8 +186,9 @@ def gregg():
             print(Fore.CYAN + "<>" * 73)
             print(
                 Fore.LIGHTGREEN_EX
-                + "\n Gregg looks stunned. He can't believe his eyes.", Fore.LIGHTYELLOW_EX
-                +  "Did you just invent a new programming language? What is this?"
+                + "\n Gregg looks stunned. He can't believe his eyes.",
+                Fore.LIGHTYELLOW_EX
+                + "Did you just invent a new programming language? What is this?",
             )
             print(
                 Fore.LIGHTGREEN_EX
@@ -197,16 +202,19 @@ def gregg():
                 print(Fore.CYAN + "<>" * 73)
                 print(
                     Fore.LIGHTGREEN_EX
-                + "\n\n Gregg is impressed! He tells you the company is thinking of an overhaul and Turtle just might be what they're looking for.\n"
+                    + "\n\n Gregg is impressed! He tells you the company is thinking of an overhaul and Turtle just might be what they're looking for.\n"
                 )
                 return star_trek_or_star_wars()
             elif answer == "b":
                 print()
                 print(Fore.CYAN + "<>" * 73)
                 print(
-                    Fore.LIGHTRED_EX + "\n    You've made Gregg cry. Oh uh. This is not good. Gregg quietly asks you to leave and to never come back. \n"
+                    Fore.LIGHTRED_EX
+                    + "\n    You've made Gregg cry. Oh uh. This is not good. Gregg quietly asks you to leave and to never come back. \n"
                 )
-                print(Fore.LIGHTRED_EX + "    Dang it! Why'd you have to be so mean? \n")
+                print(
+                    Fore.LIGHTRED_EX + "    Dang it! Why'd you have to be so mean? \n"
+                )
                 return dejected_walk_of_shame()
             elif answer == "c":
                 print()
@@ -236,10 +244,8 @@ def gregg():
                 + "\n\n Look pal, that's not right. These are basic concepts I'd expect you to know. I'll let you redeem yourself.",
                 Fore.LIGHTYELLOW_EX
                 + "\n How much wood could a woodchuck chuck if a woodchuck could chuck wood?",
-                Fore.GREEN
-                + "\n          < You start laughing >", 
-                Fore.LIGHTYELLOW_EX
-                + "\n Do you think this is a silly question? \n",
+                Fore.GREEN + "\n          < You start laughing >",
+                Fore.LIGHTYELLOW_EX + "\n Do you think this is a silly question? \n",
             )
             answer = input("     Enter -  Yes or No  ").lower()
             if answer == "yes":
